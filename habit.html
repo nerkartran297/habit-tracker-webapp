@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Habit Tracker - Home</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><i class="icon-note"></i>Habit Tracker</a>
+        </div>
+        <div class="navcontainer"> 
+            <div id="note" class="hitem">
+                <a href="index.html">
+                    Ranking
+                </a>
+            </div>
+            <div id="home" class="hitem">
+                <a href="index.html">
+                    Home
+                </a>
+            </div>
+            <div id="note" class="hitem">
+                <a href="note.html">
+                    Note
+                </a>
+            </div>
+            <div id="habit" class="hitem active">
+                <a href="habit.html">
+                    Habit
+                </a>
+            </div>
+            <div id="login">
+                <a href="./login/index.html">
+                    Login
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End header -->
+
+    <div class="division"> CHECKING FOR STATS </div>
+
+    <div class="habitContainer">
+        <div class="stat">
+            <p>
+                Our current stats:
+            </p>
+            <div class="skills">
+                <div class="skillstat">
+                    <div>Healthy: </div>
+                    <div class="jsprogress1">
+                        <div class="jsbar" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="skillstat">
+                    <div>Streaks: </div>
+                    <div class="jsprogress1">
+                        <div class="jsbar" style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="skillstat">
+                    <div>Budget: </div>
+                    <div class="jsprogress1">
+                        <div class="jsbar" style="width: 40%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar">
+            <div class="line thungay">
+                <div class="day" style="background-color: rgb(225, 129, 129); border-radius: 20px;">Su</div>
+                <div class="day">Mo</div>
+                <div class="day">Tu</div>
+                <div class="day">We</div>
+                <div class="day">Th</div>
+                <div class="day">Fr</div>
+                <div class="day">Sa</div>
+            </div>
+            <div class="line">
+                <div class="day">01</div>
+                <div class="day">02</div>
+                <div class="day">03</div>
+                <div class="day">04</div>
+                <div class="day">05</div>
+                <div class="day">06</div>
+                <div class="day">07</div>
+            </div>
+            <div class="line">
+                <div class="day">08</div>
+                <div class="day">09</div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day">13</div>
+                <div class="day">14</div>
+            </div>
+            <div class="line">
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day">17</div>
+                <div class="day">18</div>
+                <div class="day">19</div>
+                <div class="day">20</div>
+                <div class="day">21</div>
+            </div>
+            <div class="line">
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day" style="background-color: rgb(225, 129, 129); border-radius: 20px; animation: glow 2s infinite alternate;">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day">27</div>
+                <div class="day">28</div>
+            </div>
+            <div class="line">
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day">31</div>
+                <div class="day nextmonth">01</div>
+                <div class="day nextmonth">02</div>
+                <div class="day nextmonth">03</div>
+                <div class="day nextmonth">04</div>
+            </div>
+        </div>
+
+        <div class="status">
+            <div>
+                <h3> * Finance Status:</h3>
+                <p>
+                    My Budget: 12.000K <br><br>
+                    Spent: House rent: 1.000K
+                    / Fuel: 200K
+                    / Parking: 300K
+                    / Monitor: 1.700K
+                    / HDMI Cable: 300K <br>
+                    Eating: 80K x 30 days ~ 2.400K<br><br>
+                    Remaining: 6.100K
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="division"> CHECKING FOR HABITS </div>
+
+    <div class="habitContainer">
+        <div class="todo">
+            <form>
+                <div class="checklist-item">
+                  <input type="checkbox" id="task1" name="task1">
+                  <label for="task1">Quên tập thể dục buổi sáng</label>
+                </div>
+                <div class="checklist-item">
+                  <input type="checkbox" id="task2" name="task2">
+                  <label for="task2">Quên ngủ sớm</label>
+                </div>
+                <div class="checklist-item">
+                  <input type="checkbox" id="task3" name="task3">
+                  <label for="task3">Quên làm bài tập về nhà</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task4" name="task4">
+                    <label for="task4">Quên dậy sớm</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task5" name="task5">
+                    <label for="task5">Quên đi học</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task6" name="task6">
+                    <label for="task5">Quên đi ăn</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task7" name="task7">
+                    <label for="task5">Quên đi vệ sinh</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task8" name="task8">
+                    <label for="task5">Quên laptop trên trường</label>
+                </div>
+            </form>
+        </div>
+        <div class="habits">
+            <div class="habitLine">
+                <div class="habitInfo emergency">
+                    <i class="fa-solid fa-bell" style="font-size: 2.4rem; padding: 10px;"></i>
+                    <div style="text-align: center;">
+                        <h3 style="margin:0px;">Wake Up!</h3>
+                        <p style="margin:0px;">6:30 AM</p>
+                    </div>
+                </div>
+                <div class="habitInfo emergency">
+                    <i class="fa-solid fa-bell" style="font-size: 2.4rem; padding: 10px;"></i>
+                    <div style="text-align: center;">
+                        <h3 style="margin:0px;">Go 2 school</h3>
+                        <p style="margin:0px;">7:30 AM</p>
+                    </div>
+                </div>
+                <div class="habitInfo emergency">
+                    <i class="fa-solid fa-bell" style="font-size: 2.4rem; padding: 10px;"></i>
+                    <div style="text-align: center;">
+                        <h3 style="margin:0px;">Task 3</h3>
+                        <p style="margin:0px;">9:30 AM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="habitLine">
+                <div class="habitInfo calm">
+                    <i class="fa-solid fa-bell" style="font-size: 2.4rem; padding: 10px;"></i>
+                    <div style="text-align: center;">
+                        <h3 style="margin:0px;">Have a tea</h3>
+                        <p style="margin:0px;">13:30 PM</p>
+                    </div>
+                </div>
+                <div class="habitInfo calm">
+                    <i class="fa-solid fa-bell" style="font-size: 2.4rem; padding: 10px;"></i>
+                    <div style="text-align: center;">
+                        <h3 style="margin:0px;">Eating</h3>
+                        <p style="margin:0px;">16:30 PM</p>
+                    </div>
+                </div>
+                <div class="habitInfo calm">
+                    <i class="fa-solid fa-bell" style="font-size: 2.4rem; padding: 10px;"></i>
+                    <div style="text-align: center;">
+                        <h3 style="margin:0px;">Go to sleep</h3>
+                        <p style="margin:0px;">22:30 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="footer" style="background-color: rgb(235, 242, 250);">
+        <div>
+            <p>&copy; Habit Tracker</p>
+            <div class="contact" style="display:flex;">
+                <div><a href="https://www.facebook.com/nerkar297">
+                    <i class="fa-brands fa-facebook"></i>
+                </a></div>
+                <div><a href="https://www.youtube.com">
+                    <i class="fa-brands fa-twitter"></i>
+                </a></div>
+                <div><a href="https://www.instagram.com/nerkar.297">
+                    <i class="fa-brands fa-instagram"></i>
+                </a></div>
+                <div><a href="https://www.linkedin.com/in/nerkar297">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
