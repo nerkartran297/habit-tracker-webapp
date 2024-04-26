@@ -8,27 +8,27 @@
 </head>
 <body>
     <!-- Header -->
-    <div class="navbar">
-        <div class="logo">
-            <a href="index.html"><i class="icon-note"></i>Habit Tracker</a>
+    <div class="navigationBar">
+        <div class="textLogo">
+            <a href="index.html">Habit Tracker</a>
         </div>
-        <div class="navcontainer"> 
-            <div id="note" class="hitem">
+        <div class="sectionContainer"> 
+            <div class="sectionItem">
                 <a href="index.html">
                     Ranking
                 </a>
             </div>
-            <div id="home" class="hitem active">
+            <div class="sectionItem active">
                 <a href="index.html">
                     Home
                 </a>
             </div>
-            <div id="note" class="hitem">
+            <div class="sectionItem">
                 <a href="note.html">
                     Note
                 </a>
             </div>
-            <div id="habit" class="hitem">
+            <div class="sectionItem">
                 <a href="habit.html">
                     Habit
                 </a>
@@ -42,10 +42,10 @@
     </div>
     <!-- End header -->
 
-    <div class="division"> MY DASHBOARD </div>
+    <div class="divider"> MY DASHBOARD </div>
     <!-- Part 1: Information and Introduction -->
-    <div class="icontainer">
-        <div class="info">
+    <div class="dashBoard">
+        <div class="selfIntro">
             <img src="https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/333211960_890188872260864_2092602957413911228_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ebW2v8KJrzQAb5nEZEb&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfDYpywCQpzQTB3wJk8RYxcogF2r-a8kED9UL5g-XJtOoQ&oe=662DB0AB"
             style="width: 90%; height: 90%; border-radius: 20px;"/>
             <div>
@@ -56,28 +56,28 @@
                 </p>
             </div>
         </div>
-        <div class="stat">
+        <div class="currentProgress">
             <p>
                 My progress in learning some skills:
             </p>
             <a href="habit.html">Click here for a full view:</a>
-            <div class="skills">
-                <div class="skillstat">
-                    <div>JS: </div>
-                    <div class="jsprogress1">
-                        <div class="jsbar" style="width: 50%;"></div>
+            <div class="skillBoard">
+                <div class="skillStat">
+                    <div class="skillName">JS: </div>
+                    <div class="progressBar">
+                        <div class="progressStat" style="width: 50%;"></div>
                     </div>
                 </div>
-                <div class="skillstat">
-                    <div>HTML: </div>
-                    <div class="jsprogress1">
-                        <div class="jsbar" style="width: 30%;"></div>
+                <div class="skillStat">
+                    <div class="skillName">HTML: </div>
+                    <div class="progressBar">
+                        <div class="progressStat" style="width: 30%;"></div>
                     </div>
                 </div>
-                <div class="skillstat">
-                    <div>CSS: </div>
-                    <div class="jsprogress1">
-                        <div class="jsbar" style="width: 40%;"></div>
+                <div class="skillStat">
+                    <div class="skillName">CSS: </div>
+                    <div class="progressBar">
+                        <div class="progressStat" style="width: 40%;"></div>
                     </div>
                 </div>
             </div>
@@ -85,63 +85,63 @@
         </div>
 
         <div class="calendar">
-            <div class="line thungay">
-                <div class="day" style="background-color: rgb(225, 129, 129); border-radius: 20px;">Su</div>
-                <div class="day">Mo</div>
-                <div class="day">Tu</div>
-                <div class="day">We</div>
-                <div class="day">Th</div>
-                <div class="day">Fr</div>
-                <div class="day">Sa</div>
+            <div class="calendarLine dayName">
+                <div class="calendarDay">Mo</div>
+                <div class="calendarDay">Tu</div>
+                <div class="calendarDay">We</div>
+                <div class="calendarDay">Th</div>
+                <div class="calendarDay">Fr</div>
+                <div class="calendarDay">Sa</div>
+                <div class="calendarDay" style="background-color: rgb(225, 129, 129); border-radius: 20px;">Su</div>
             </div>
-            <div class="line">
-                <div class="day">01</div>
-                <div class="day">02</div>
-                <div class="day">03</div>
-                <div class="day">04</div>
-                <div class="day">05</div>
-                <div class="day">06</div>
-                <div class="day">07</div>
+            <div class="calendarLine">
+                <div class="calendarDay">01</div>
+                <div class="calendarDay">02</div>
+                <div class="calendarDay">03</div>
+                <div class="calendarDay">04</div>
+                <div class="calendarDay">05</div>
+                <div class="calendarDay">06</div>
+                <div class="calendarDay">07</div>
             </div>
-            <div class="line">
-                <div class="day">08</div>
-                <div class="day">09</div>
-                <div class="day">10</div>
-                <div class="day">11</div>
-                <div class="day">12</div>
-                <div class="day">13</div>
-                <div class="day">14</div>
+            <div class="calendarLine">
+                <div class="calendarDay">08</div>
+                <div class="calendarDay">09</div>
+                <div class="calendarDay">10</div>
+                <div class="calendarDay">11</div>
+                <div class="calendarDay">12</div>
+                <div class="calendarDay">13</div>
+                <div class="calendarDay">14</div>
             </div>
-            <div class="line">
-                <div class="day">15</div>
-                <div class="day">16</div>
-                <div class="day">17</div>
-                <div class="day">18</div>
-                <div class="day">19</div>
-                <div class="day">20</div>
-                <div class="day">21</div>
+            <div class="calendarLine">
+                <div class="calendarDay">15</div>
+                <div class="calendarDay">16</div>
+                <div class="calendarDay">17</div>
+                <div class="calendarDay">18</div>
+                <div class="calendarDay">19</div>
+                <div class="calendarDay">20</div>
+                <div class="calendarDay">21</div>
             </div>
-            <div class="line">
-                <div class="day">22</div>
-                <div class="day">23</div>
-                <div class="day" style="background-color: rgb(225, 129, 129); border-radius: 20px; animation: glow 2s infinite alternate;">24</div>
-                <div class="day">25</div>
-                <div class="day">26</div>
-                <div class="day">27</div>
-                <div class="day">28</div>
+            <div class="calendarLine">
+                <div class="calendarDay">22</div>
+                <div class="calendarDay">23</div>
+                <div class="calendarDay" style="background-color: rgb(225, 129, 129); border-radius: 20px; animation: glow 2s infinite alternate;">24</div>
+                <div class="calendarDay">25</div>
+                <div class="calendarDay">26</div>
+                <div class="calendarDay">27</div>
+                <div class="calendarDay">28</div>
             </div>
-            <div class="line">
-                <div class="day">29</div>
-                <div class="day">30</div>
-                <div class="day">31</div>
-                <div class="day nextmonth">01</div>
-                <div class="day nextmonth">02</div>
-                <div class="day nextmonth">03</div>
-                <div class="day nextmonth">04</div>
+            <div class="calendarLine">
+                <div class="calendarDay">29</div>
+                <div class="calendarDay">30</div>
+                <div class="calendarDay">31</div>
+                <div class="calendarDay nextMonth">01</div>
+                <div class="calendarDay nextMonth">02</div>
+                <div class="calendarDay nextMonth">03</div>
+                <div class="calendarDay nextMonth">04</div>
             </div>
         </div>
 
-        <div class="introduction">
+        <div class="webIntro">
             <div>
                 <h3>Introduction</h3>
                 <p>
@@ -151,43 +151,57 @@
         </div>
     </div>
 
-    <div class="division"> YOUR RECENT DIARIES </div>
+    <div class="divider"> YOUR RECENT DIARIES </div>
     <!-- Part 2: Habits and Notes progress -->
-    <div class="documents">
-        <div class="report">
+    <div class="pinnedDoc">
+        <div class="document">
             <img src="https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/333211960_890188872260864_2092602957413911228_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ebW2v8KJrzQAb5nEZEb&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfDYpywCQpzQTB3wJk8RYxcogF2r-a8kED9UL5g-XJtOoQ&oe=662DB0AB"
-            class="imgDoc"
+            class="docImage"
             style="width: 90%; height: 90%; border-radius: 20px;"/>
             <h4 class="docTitle">Diary: 23/04/2024</h4>
-            <p class="shortly">This is a good day...</p>
+            <p class="docShort">This is a good day...</p>
         </div>
-        <div class="report">
+        <div class="document">
             <img src="https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/333211960_890188872260864_2092602957413911228_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ebW2v8KJrzQAb5nEZEb&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfDYpywCQpzQTB3wJk8RYxcogF2r-a8kED9UL5g-XJtOoQ&oe=662DB0AB"
-            class="imgDoc"
+            class="docImage"
             style="width: 90%; height: 90%; border-radius: 20px;"/>
             <h4 class="docTitle">Diary: 22/04/2024</h4>
-            <p class="shortly">This is a good day...</p>
+            <p class="docShort">This is a good day...</p>
         </div>
-        <div class="report">
+        <div class="document">
             <img src="https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/333211960_890188872260864_2092602957413911228_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ebW2v8KJrzQAb5nEZEb&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfDYpywCQpzQTB3wJk8RYxcogF2r-a8kED9UL5g-XJtOoQ&oe=662DB0AB"
-            class="imgDoc"
+            class="docImage"
             style="width: 90%; height: 90%; border-radius: 20px;"/>
             <h4 class="docTitle">Diary: 21/04/2024</h4>
-            <p class="shortly">This is a good day...</p>
+            <p class="docShort">This is a good day...</p>
         </div>
-        <div class="report">
+        <div class="document">
             <img src="https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/333211960_890188872260864_2092602957413911228_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ebW2v8KJrzQAb5nEZEb&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfDYpywCQpzQTB3wJk8RYxcogF2r-a8kED9UL5g-XJtOoQ&oe=662DB0AB"
-            class="imgDoc"
+            class="docImage"
             style="width: 90%; height: 90%; border-radius: 20px;"/>
             <h4 class="docTitle">Diary: 20/04/2024</h4>
-            <p class="shortly">This is a good day...</p>
+            <p class="docShort">This is a good day...</p>
         </div>
-        <div class="report">
+        <div class="document">
             <img src="https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/333211960_890188872260864_2092602957413911228_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ebW2v8KJrzQAb5nEZEb&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfDYpywCQpzQTB3wJk8RYxcogF2r-a8kED9UL5g-XJtOoQ&oe=662DB0AB"
-            class="imgDoc"
+            class="docImage"
             style="width: 90%; height: 90%; border-radius: 20px;"/>
             <h4 class="docTitle">Diary: 19/04/2024</h4>
-            <p class="shortly">This is a good day...</p>
+            <p class="docShort">This is a good day...</p>
+        </div>
+        <div class="document">
+            <img src="https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/333211960_890188872260864_2092602957413911228_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ebW2v8KJrzQAb5nEZEb&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfDYpywCQpzQTB3wJk8RYxcogF2r-a8kED9UL5g-XJtOoQ&oe=662DB0AB"
+            class="docImage"
+            style="width: 90%; height: 90%; border-radius: 20px;"/>
+            <h4 class="docTitle">Diary: 20/04/2024</h4>
+            <p class="docShort">This is a good day...</p>
+        </div>
+        <div class="document">
+            <img src="https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/333211960_890188872260864_2092602957413911228_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ebW2v8KJrzQAb5nEZEb&_nc_ht=scontent.fsgn16-1.fna&oh=00_AfDYpywCQpzQTB3wJk8RYxcogF2r-a8kED9UL5g-XJtOoQ&oe=662DB0AB"
+            class="docImage"
+            style="width: 90%; height: 90%; border-radius: 20px;"/>
+            <h4 class="docTitle">Diary: 19/04/2024</h4>
+            <p class="docShort">This is a good day...</p>
         </div>
     </div>
 

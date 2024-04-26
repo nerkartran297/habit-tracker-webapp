@@ -19,11 +19,23 @@ body {
     /* height: auto; */
 }
 
+body::-webkit-scrollbar {
+    width: 8px;
+    /* Adjust height as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(235, 242, 250);
+    border-radius: 10px;
+}
+
+
+
 a {
     text-decoration: none;
 }
 
-.navbar {
+.navigationBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,27 +44,27 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .logo {
+.navigationBar .textLogo {
     padding-left: 40px;
     padding-right: 30px;
     font-weight: 600;
     font-size: 1.5rem;
 }
 
-.navcontainer a {
+.sectionContainer a {
     color: rgb(66, 122, 161)
 }
 
-.navbar .logo a {
+.navigationBar .textLogo a {
     color: rgb(6, 71, 137);
 }
 
-.navcontainer {
+.sectionContainer {
     display: flex;
     padding-right: 40px;
 }
 
-.navcontainer div {
+.sectionContainer div {
     margin: 5px;
     padding-left: 15px;
     padding-right: 15px;
@@ -61,22 +73,14 @@ a {
     border-radius: 20px;
 }
 
-.navcontainer .active {
+.sectionContainer .active {
     background-color: rgb(62, 164, 189);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.navcontainer .active a {
+.sectionContainer .active a {
     color: rgb(235, 242, 250);
 }
-
-/* .hitem {
-    transition: background-color 0.5s ease;
-}
-
-.hitem:hover {
-    background-color: rgb(121, 166, 218);
-} */
 
 #login {
     text-align: center;
@@ -95,15 +99,11 @@ a {
     color: rgb(235, 242, 250);
 }
 
-#signup {
-    width: 90px;
-}
-
 /* END HEADER */
 
 /* BODY START */
 
-.icontainer {
+.dashBoard {
     display: flex;
     align-items: center;
     border-radius: 20px;
@@ -112,7 +112,7 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.stat {
+.currentProgress {
     width: 400px;
     height: 200px;
     background-color: white;
@@ -122,25 +122,25 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.stat a {
+.currentProgress a {
     color: rgb(47, 99, 204);
 }
 
-.skillstat {
+.skillStat {
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.jsprogress1 {
+.progressBar {
     width: 250px;
     height: 20px;
     background-color: #ddd;
     border-radius: 10px;
 }
 
-.jsbar {
+.progressStat {
     height: 100%;
     background-color: #4CAF50;
     border-radius: 10px;
@@ -148,13 +148,13 @@ a {
     animation: glow 2s infinite alternate;
 }
 
-.jsbar:hover {
+.progressStat:hover {
     height: 100%;
     background-color: rgb(67, 137, 207);
     border-radius: 10px;
 }
 
-.info {
+.selfIntro {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,7 +167,11 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.introduction {
+.selfIntro img {
+    margin-right: 20px;
+}
+
+.webIntro {
     display: flex;
     justify-content: center;
     width: 300px;
@@ -177,10 +181,6 @@ a {
     padding: 20px;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.info img {
-    margin-right: 20px;
 }
 
 /* FOR THE CALENDAR */
@@ -197,24 +197,24 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.thungay {
+.dayName {
     /* border: 2px solid red; */
     border-radius: 20px;
     background-color: #80cf83;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.nextmonth {
+.nextMonth {
     opacity: 0.5;
 }
 
-.line {
+.calendarLine {
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-.day {
+.calendarDay {
     margin: 2px;
     display: flex;
     justify-content: center;
@@ -225,7 +225,8 @@ a {
 
 /* NOTE */
 
-.noteboard {
+.noteBoard {
+    padding: 20px;
     border-radius: 20px;
     margin: 20px;
     background-color: rgb(177, 207, 241);
@@ -237,7 +238,7 @@ a {
     /* margin: 20px; */
     padding: 20px;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
 }
 
 #finder {
@@ -249,26 +250,79 @@ a {
 .noteLine {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
+.noteLine a:visited {
+    color: black;
+}
+
+.noteLine a:link {
+    color: black;
+}
+
+.noteContainer {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 300px;
+    width: 350px;
+    min-height: 150px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.noteContainer:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.noteContainer img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    margin-right: 20px;
+    opacity: 0.8;
+    margin-left: 5px;
+}
+
+.noteIntro {
+    width: auto;
+}
 
 /* PART 2: DOCUMENT */
 
-.documents {
+.pinnedDoc {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     align-items: center;
     padding: 20px;
     border-radius: 20px;
     margin: 20px;
     background-color: rgb(177, 207, 241);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
-.report {
+.pinnedDoc::-webkit-scrollbar {
+    height: 8px;
+    /* Adjust height as needed */
+}
+
+.pinnedDoc::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.document {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 200px;
     width: 200px;
     height: 300px;
     background-color: white;
@@ -278,7 +332,7 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.imgDoc {
+.docImage {
     opacity: 0.7;
 }
 
@@ -286,18 +340,18 @@ a {
     opacity: 0.7;
 }
 
-.shortly {
+.docShort {
     opacity: 0.7;
 }
 
-.report:hover .imgDoc,
-.report:hover h4,
-.report:hover p {
+.document:hover .docImage,
+.document:hover h4,
+.document:hover p {
     opacity: 1.0;
     transition: opacity 0.5s ease;
 }
 
-.division {
+.divider {
     margin: 20px;
     text-align: center;
     font-size: 1.2rem;
