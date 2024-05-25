@@ -1,0 +1,40 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "date": "2024-04-27",
+      "title": "Note 1",
+      "body": "This is the first note in the notes.json file."
+    },
+    {
+      "id": 2,
+      "date": "2024-04-26",
+      "title": "Note 2",
+      "body": "This is the second note in the notes.json file.\nIt has multiple lines of text."
+    },
+    {
+      "id": 3,
+      "date": "2024-04-25",
+      "title": "Note 3",
+      "body": "This is the third note in the notes.json file. It's a short note."
+    },
+    {
+      "id": 4,
+      "date": "2024-04-24",
+      "title": "Note 4",
+      "body": "This is the fourth note in the notes.json file.\nIt contains some interesting ideas."
+    },
+    {
+      "id": 5,
+      "date": "2024-04-23",
+      "title": "Note 5",
+      "body": "This is the fifth note in the notes.json file.\nIt's a reminder for tomorrow."
+    },
+    {
+      "id": 6,
+      "date": "2024-04-22",
+      "title": "Note 6",
+      "body": "This is the sixth note in the notes.json file.\nIt's quite a long note with\nmultiple paragraphs and even\ncode snippets."
+    }
+  ]
+}

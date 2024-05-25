@@ -23,25 +23,25 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 768px;
+    width: 900px;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 560px;
 }
 
 .container p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
 }
 
 .container span {
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .container a {
     color: #333;
-    font-size: 13px;
+    font-size: 16px;
     text-decoration: none;
     margin: 15px 0 10px;
 }
@@ -49,7 +49,7 @@ body {
 .container button {
     background-color: rgb(89, 160, 231);
     color: #fff;
-    font-size: 12px;
+    font-size: 16px;
     padding: 10px 45px;
     border: 1px solid transparent;
     border-radius: 20px;
@@ -80,7 +80,7 @@ body {
     border: none;
     margin: 8px 0;
     padding: 10px 15px;
-    font-size: 13px;
+    font-size: 16px;
     border-radius: 20px;
     width: 100%;
     outline: none;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Habit Tracker - Home</title>
+    <title>Habit Tracker - Editor</title>
 </head>
 <body>
     <!-- Header -->
@@ -13,12 +13,17 @@
             <a href="index.html">Habit Tracker</a>
         </div>
         <div class="sectionContainer"> 
+            <div class="sectionItem active">
+                <a>
+                    Note View
+                </a>
+            </div>
             <div class="sectionItem">
                 <a href="index.html">
                     Ranking
                 </a>
             </div>
-            <div class="sectionItem active">
+            <div class="sectionItem">
                 <a href="index.html">
                     Home
                 </a>
@@ -41,6 +46,29 @@
         </div>
     </div>
     <!-- End header -->
+    <div class="editorContainer">
+        <div class="viewContainer">
+            <div class="noteCover">
+                <img style="max-width: 100%; border-radius: 15px;" src="./photos/IMG_1878.JPG"/>
+            </div>
+            <div class="notePreview">
+                <div style="margin: 10px;">
+                    <div style="width: 100%; align-items: center; justify-content: space-between; display: flex;">
+                        <div class="noteHeader">
+                            <p id="previewDate">27-04-2024</p>
+                        </div>
+                        <a href="noteEditor.html" class="enterEdit" style="color: white;">Click here to edit</a>
+                    </div>
+                    <div class="noteClass">
+                        <p id="previewTitle" style="margin-top:0px;">Diary</p> 
+                    </div>
+                    <div class="noteBody">
+                        <p id="previewBody" style="text-align: justify;">Today is a good day and I love that.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Start -->
     <div class="footer" style="background-color: rgb(235, 242, 250);">
