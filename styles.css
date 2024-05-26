@@ -71,6 +71,14 @@ a {
     border-radius: 20px;
 }
 
+.sectionItem {
+    transition: background-color 0.5s ease;
+}
+
+.sectionItem:hover {
+    background-color:#ffffff;
+}
+
 .sectionContainer .active {
     background-color: rgb(62, 164, 189);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -441,6 +449,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+.alarmInfo:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .emergency {
@@ -449,6 +463,16 @@ a {
 
 .calm {
     background-color: rgb(138, 247, 114);
+}
+
+.descriptionContainer {
+    width: auto;
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* NOTE IDE */
