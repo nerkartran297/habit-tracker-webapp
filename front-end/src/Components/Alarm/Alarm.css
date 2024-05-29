@@ -1,0 +1,57 @@
+.alarmContainer {
+    width: auto;
+    height: 200;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alarmLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.alarmInfo {
+    height: 60px;
+    border-radius: 20px;
+    padding: 10px;
+    padding-right: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+.alarmInfo div{
+    text-align: center;
+}
+
+.alarmInfo i {
+    font-size: 2.4rem;
+    padding: 5px;
+}
+
+.alarmInfo p {
+    padding: 0;
+}
+
+.alarmInfo h3 {
+    padding: 0;
+}
+
+.alarmInfo:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.emergency {
+    background-color: rgb(234, 128, 128);
+}
+
+
+.calm {
+    background-color: rgb(138, 247, 114);
+}

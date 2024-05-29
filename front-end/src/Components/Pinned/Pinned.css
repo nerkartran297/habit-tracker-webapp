@@ -1,0 +1,13 @@
+.pinnedText h3 {
+    margin: 5px;
+}
+
+.pinnedText {
+    width: 900px;
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

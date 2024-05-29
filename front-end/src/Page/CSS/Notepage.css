@@ -1,0 +1,17 @@
+.noteBoard {
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: rgb(177, 207, 241);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.noteboard {
+    border-radius: 20px;
+    margin: 20px;
+    background-color: rgb(177, 207, 241);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+

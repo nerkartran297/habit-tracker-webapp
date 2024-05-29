@@ -1,0 +1,65 @@
+.editorContainer {
+    background-color: rgb(201, 219, 240);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noteCover img {
+    max-width: 100%;
+    border-radius: 15px ;
+}
+
+.viewContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notePreview {
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.notePreview div {
+    margin: 10px;
+}
+
+.notePreview div div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.enterEdit {
+    color: white;
+}
+
+#previewTitle {
+    margin-top: 0px;
+}
+
+#previewBody {
+    text-align: justify;
+}
+
+.noteBody textarea {
+    resize: none;
+    font-size: 1rem;
+    font-family: 'UTM Avo';
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 16px;
+    border: none;
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    overflow: auto;
+}

@@ -1,0 +1,41 @@
+.currentProgress {
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.currentProgress a {
+    color: rgb(47, 99, 204);
+}
+
+.skillStat {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progressBar {
+    width: 250px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.progressStat {
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+    animation: glow 2s infinite alternate;
+}
+
+.progressStat:hover {
+    height: 100%;
+    background-color: rgb(67, 137, 207);
+    border-radius: 10px;
+}

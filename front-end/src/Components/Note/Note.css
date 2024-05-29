@@ -1,0 +1,55 @@
+.noteContainer {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 300px;
+    width: 350px;
+    min-height: 150px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.noteContainer:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.noteContainer img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    margin-right: 20px;
+    opacity: 0.8;
+    margin-left: 5px;
+}
+
+.noteIntro {
+    width: auto;
+}
+
+.noteIntro div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.noteIntro p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
+.noteIntro div p {
+    margin-top:  0px;
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
+.noteIntro div h3 {
+    margin-top:  0px;
+    margin-bottom: 0px;
+    text-align: justify;
+}

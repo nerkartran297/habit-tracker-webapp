@@ -1,0 +1,44 @@
+.calendar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendarLine {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.calendarDay {
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 5px;
+}
+
+.dayName {
+    border-radius: 20px;
+    background-color: #80cf83;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nextMonth {
+    opacity: 0.5;
+}
+
+
+.today {
+    background-color: rgb(225, 129, 129);
+    border-radius: 20px;
+    animation: glow 2s infinite alternate;
+}

@@ -1,0 +1,71 @@
+.navigationBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(235, 242, 250);
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navigationBar .textLogo {
+    padding-left: 40px;
+    padding-right: 30px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.sectionContainer a {
+    color: rgb(66, 122, 161)
+}
+
+.navigationBar .textLogo a {
+    color: rgb(6, 71, 137);
+}
+
+.sectionContainer {
+    display: flex;
+    padding-right: 40px;
+}
+
+.sectionContainer div {
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+
+.sectionItem {
+    transition: background-color 0.5s ease;
+}
+
+.sectionItem:hover {
+    background-color:#ffffff;
+}
+
+.sectionContainer .active {
+    background-color: rgb(62, 164, 189);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sectionContainer .active a {
+    color: rgb(235, 242, 250);
+}
+
+#login {
+    text-align: center;
+    background-color: rgb(6, 71, 137);
+    transition: background-color 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#login:hover {
+    text-align: center;
+    background-color: rgb(121, 166, 218);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#login a {
+    color: rgb(235, 242, 250);
+}

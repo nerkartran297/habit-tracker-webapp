@@ -1,0 +1,21 @@
+.contact {
+    display: flex;
+}
+
+
+.footer {
+    background-color: rgb(235, 242, 250);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact div {
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.contact i {
+    color: rgb(6, 71, 137);
+}
