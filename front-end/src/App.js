@@ -7,6 +7,7 @@ import Notepage from './Page/Notepage'
 import Noteviewpage from './Page/Noteviewpage'
 import Noteeditorpage from './Page/Noteeditorpage'
 import './styles.css'
+import Loginsignuppage from './Page/Loginsignuppage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Loginsignuppage />} />
         <Route path="/habit" element={<Habit />} />
         <Route path="/habit/:id" element={<Habit />} />
         <Route path="/note" element={<Notepage />} />

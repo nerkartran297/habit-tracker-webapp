@@ -23,9 +23,7 @@ const Navbar = () => {
             <Link to='/habit'>Habit</Link>
             </div>
             <div id="login">
-                <a href="./login/index.html">
-                    Login
-                </a>
+            <Link to='/login'>Login</Link>
             </div>
         </div>
     </div>
