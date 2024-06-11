@@ -4,8 +4,11 @@ const bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const User = require('./models/User');
+const Note = require('./models/Note');
 const uuid = require("uuid");
 const app = express();
+const cors = require('cors');
+const port = 4000;
 
 app.use(express.json());
 app.use(cors());
@@ -67,6 +70,8 @@ app.post("/upload", fetchAdmin, upload.single("product"), (req, res) => {
     });
 });
 
+
+
 // Creating Endpoint for registering a user
 app.post('/signup', async (req, res) => {
     let check = await User.findOne({ email: req.body.email });
@@ -84,102 +89,43 @@ app.post('/signup', async (req, res) => {
             }
         );
     }
-    let cart = {};
-    let order = [];
-    cart["0"] = 0;
-    order.push("0");
     const user = new User(
         {
             username: req.body.username,
             email: req.body.email,
             password: hashedPassword,
-            cartData: cart,
-            orderData: order,
         }
     );
 
     await user.save();
+    console.log("User Registered Successfully");
 
-    const data = {
-        user:{
-            id: user.id,
-        }
-    }
-
-    const token = jwt.sign(data, "secret_ecom");
-    let message = await Message.findOne({ user_id: user.id });
-    
-            if (!message) {
-                message = new Message({ user_id: user.id, messages: [] });
-                await message.save();
-            }
-    res.json(
-        {
-            success: true,
-            token: token,
-        }
-    );
 }
 );
 
 // Creating endpoint for user/admin login
-app.post('/login', async (req, res) => {
-    let user = await User.findOne({ email: req.body.email });
-    if (user) 
-    {
-        // Dùng bcrypt để so sánh password
+app.post('/login',async (req,res)=>{
+    let user = await User.findOne({email:req.body.email});
+    if (user) {
         const passCompare = await bcrypt.compare(req.body.password, user.password);
-        if (passCompare) 
-        {
+        if (passCompare) {
             const data = {
                 user:{
-                    id: user.id,
+                    id:user.id
                 }
             }
-            const token = req.body.email === 'admin'?jwt.sign(data, "admin"):jwt.sign(data, "secret_ecom");
-            let message = await Message.findOne({ user_id: user.id });
-    
-            if (!message) {
-                message = new Message({ user_id: user.id, messages: [] });
-                await message.save();
-            }
-            req.body.email === 'admin' ?res.json(
-                {
-                    success: true,
-                    token: token,
-                    admin: true,
-                }
-            ):
-            res.json(
-                {
-                    success: true,
-                    token: token,
-                    admin: false,
-                }
-            )
-            ;
+            const token = jwt.sign(data,'secret_ecom');
+            res.json({success:true,token});
         }
-        else
-        {
-            res.json(
-                {
-                    success: false,
-                    message: "Invalid Password",
-                }
-            );
+        else {
+            res.json({success:false,errors:"Wrong Password"});
         }
     }
-    else
-    {
-        res.json(
-            {
-                success: false,
-                message: "User not found",
-            }
-        );
+    else {
+        res.json({success:false,errors:"Wrong Email Id"})
     }
-        
-});
+
+})
 
 // Creating middleware for user authentication
 const fetchUser = async (req, res, next) => {
@@ -201,12 +147,34 @@ const fetchUser = async (req, res, next) => {
         }
 }
 
+// Creating endpoint for user profile
+app.post('/getdescription', fetchUser,async(req,res)=>{
+    let user = await User.findOne({_id:req.user.id});
+    res.json(user);
+  })
+
+
+// Creating endpoint for creating a note
+app.post('/createnote', fetchUser, async (req, res) => {
+    let user = await User.findOne({_id:req.user.id});
+    const note = new Note({
+        id: generateID(),
+        userId: user.id,
+        title: req.body.title,
+        content: req.body.content,
+    });
+
+    await note.save();
+    res.json({ success: true });
+    console.log('Saved');
+});
 
 // Listening to the server
-server.listen(port, (err) => {
-    if (err) {
-        console.log("Error in connecting to the server");
-    } else {
-        console.log("Server is running on port: " + port);
+app.listen(port,(error)=>{
+    if (!error) {
+        console.log("server Running on Port" + port)
     }
-});
+    else {
+        console.log("Error : "+error)
+    }
+})

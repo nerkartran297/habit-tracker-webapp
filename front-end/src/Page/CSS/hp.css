@@ -1,0 +1,286 @@
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+        /* Bóng đổ tắt */
+    }
+
+    50% {
+        box-shadow: 0 0 10px rgba(43, 42, 42, 0.5);
+        /* Bóng đổ sáng */
+    }
+}
+
+body {
+    font-family: 'UTM Avo';
+    /* font-family: 'Montserrat', sans-serif; */
+    width: auto;
+    /* height: auto; */
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    /* Adjust height as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(235, 242, 250);
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navigationBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(235, 242, 250);
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navigationBar .textLogo {
+    padding-left: 40px;
+    padding-right: 30px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.sectionContainer a {
+    color: rgb(66, 122, 161)
+}
+
+.navigationBar .textLogo a {
+    color: rgb(6, 71, 137);
+}
+
+.sectionContainer {
+    display: flex;
+    padding-right: 40px;
+}
+
+.sectionContainer div {
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+
+.sectionItem {
+    transition: background-color 0.5s ease;
+}
+
+.sectionItem:hover {
+    color: white;
+}
+
+.sectionContainer .active {
+    background-color: rgb(62, 164, 189);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sectionContainer .active a {
+    color: rgb(235, 242, 250);
+}
+
+#login {
+    text-align: center;
+    background-color: rgb(6, 71, 137);
+    transition: background-color 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#login:hover {
+    text-align: center;
+    background-color: rgb(121, 166, 218);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#login a {
+    color: rgb(255, 255, 255);
+}
+
+body {
+    font-family: 'UTM Avo', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #4285f4, #34a853);
+    color: #ffffff;
+}
+
+main {
+    padding: 80px 40px;
+}
+
+/* Navigation Bar */
+.navigationBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Nền mờ trắng */
+    padding: 20px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    /* Cố định thanh menu */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    /* Đảm bảo menu nằm trên các phần tử khác */
+}
+
+.textLogo a {
+    color: #4285f4;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.sectionContainer {
+    display: flex;
+}
+
+.sectionItem {
+    margin: 0 10px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.sectionItem a {
+    color: #4285f4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sectionItem:hover {
+    color: #fff;
+    background-color: #ffffff;
+}
+
+.sectionItem.active {
+    background-color: #4285f4;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+.hero-content {
+    text-align: left;
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    max-width: 40%;
+    /* Điều chỉnh kích thước ảnh */
+    height: auto;
+    border-radius: 10px;
+    /* Bo tròn ảnh */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.feature {
+    background-color: linear-gradient(to left, #305b9f, #108930);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature i {
+    font-size: 3rem;
+    color: #4285f4;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.testimonial-slider {
+    /* CSS for your slider implementation */
+}
+
+.testimonial {
+    background-color: linear-gradient(to left, #305b9f, #108930);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.author {
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    background: linear-gradient(to right, #34a853, #4285f4);
+    /* Gradient ngược lại */
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.call-to-action h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: #4285f4;
+    margin: 0 10px;
+}

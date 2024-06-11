@@ -5,6 +5,12 @@ import { useState } from 'react'
 const Loginsignup = () => {
     const [isActive, setIsActive] = useState(false);
 
+    const [formData,setFormData] = useState({
+      username:"",
+      password:"",
+      email:""
+    })
+
     const handleRegisterClick = () => {
       setIsActive(true);
     };
@@ -13,6 +19,55 @@ const Loginsignup = () => {
       setIsActive(false);
     };
   
+   
+  
+    const changeHandler = (e) =>{
+      setFormData({...formData,[e.target.name]:e.target.value})
+    }
+
+    const signup = async () =>{
+      console.log("signup Function Excuted",formData);
+      let responseData;
+      await fetch('/signup',{
+        method:'POST',
+        headers:{
+          Accept:'application/form-data',
+          'Content-Type':'application/json',
+        },
+        body: JSON.stringify(formData),
+      }).then((response)=> response.json()).then((data)=>responseData=data)
+    
+      if(responseData.success) {
+        localStorage.setItem('auth-token',responseData.token);
+        window.location.replace("/");
+      }
+      else {
+        alert(responseData.errors)
+      }
+    
+    }
+
+    const login = async () =>{
+      console.log("Login Function Excuted",formData)
+      let responseData;
+      await fetch('/login',{
+        method:'POST',
+        headers:{
+          Accept:'application/form-data',
+          'Content-Type':'application/json',
+        },
+        body: JSON.stringify(formData),
+      }).then((response)=> response.json()).then((data)=>responseData=data)
+    
+      if(responseData.success) {
+        localStorage.setItem('auth-token', responseData.token);
+        window.location.replace("/");
+      }
+      else {
+        alert(responseData.message)
+      }
+    }
+
     return (
       <div className={`container ${isActive ? 'active' : ''}`} id="container">
         <div className="form-container sign-up">
@@ -25,10 +80,10 @@ const Loginsignup = () => {
               <a href="#" className="icon"><i className="fab fa-linkedin-in"></i></a>
             </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button><a href="../index.html">Sign Up</a></button>
+            <input name='username' value={formData.username} onChange={changeHandler} type="text" placeholder="Name" />
+            <input name='email' value={formData.email} onChange={changeHandler} type="email" placeholder="Email" />
+            <input name='password' value={formData.password} onChange={changeHandler} type="password" placeholder="Password" />
+            <button onClick={()=>{signup()}}>Sign Up</button>
           </form>
         </div>
         <div className="form-container sign-in">
@@ -41,10 +96,10 @@ const Loginsignup = () => {
               <a href="#" className="icon"><i className="fab fa-linkedin-in"></i></a>
             </div>
             <span>or use your email password</span>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input name='email' type="email" value={formData.email} onChange={changeHandler} placeholder="Email" />
+            <input name='password' type="password" value={formData.password} onChange={changeHandler} placeholder="Password" />
             <a href="#">Forget Your Password?</a>
-            <button><a href="../index.html">Sign In</a></button>
+            <button onClick={()=>{login()}} >Sign In</button>
           </form>
         </div>
         <div className="toggle-container">

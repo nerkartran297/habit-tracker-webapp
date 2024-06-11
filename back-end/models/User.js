@@ -14,16 +14,26 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    cartData: {
-        type: Object,
-    },
-    orderData: {
-        type: Array,
-    },
     date: {
         type: Date,
         default: Date.now,
     },
+    description: {
+        type: String,
+        default: "I am a new user",
+    },
+    habits: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Habit',
+        },
+    ],
+    notes: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Note',
+        },
+    ],
 }, {timestamps: true});
 
 const UserModel = mongoose.model('user', UserSchema, "users");

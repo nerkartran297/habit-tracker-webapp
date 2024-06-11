@@ -1,12 +1,13 @@
 import React from 'react'
 import './Currentprogress.css'
+import { Link } from 'react-router-dom'
 const Currentprogress = () => {
   return (
     <div className="currentProgress">
     <p>
         My progress in learning some skills:
     </p>
-    <a href="habit.html">Click here for a full view:</a>
+    <Link to='/habit' style={{color: 'rgb(47, 99, 204)'}}>Click here for a full view:</Link>
     <div className="skillBoard">
         <div className="skillStat">
             <div className="skillName">JS: </div>

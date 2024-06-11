@@ -579,3 +579,54 @@ a {
 .contact i {
     color: rgb(6, 71, 137);
 }
+
+#homePinnedImg,
+#homePinnedQuote,
+#homePinnedDescription,
+#homePinnedBTN {
+    font-family: 'UTM Avo';
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    width: 90%;
+    background-color: rgb(252, 236, 216);
+    padding: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#homePinnedDescription,
+#homePinnedBTN {
+    width: 99%;
+}
+
+#homePinnedBTN {
+    color: white;
+    width: 99%;
+    background-color: burlywood;
+}
+
+#habitPinnedTitle,
+#habitPinnedContent,
+#habitPinnedBTN {
+    font-family: 'UTM Avo';
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    width: 90%;
+    background-color: rgb(252, 236, 216);
+    padding: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#habitPinnedContent,
+#habitPinnedBTN {
+    width: 99%;
+}
+
+#habitPinnedBTN {
+    color: white;
+    width: 99%;
+    background-color: burlywood;
+}

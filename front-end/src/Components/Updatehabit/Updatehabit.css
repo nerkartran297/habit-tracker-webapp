@@ -1,0 +1,27 @@
+.habitcontainer {
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.habitEditor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 20%;
+    align-items: center;   
+}
+
+.habitEditor div {
+   display: flex;
+   flex-direction: row;
+    gap: 10px;
+}
+
+.habitEditor h3 {
+    margin: 0px;
+}
+

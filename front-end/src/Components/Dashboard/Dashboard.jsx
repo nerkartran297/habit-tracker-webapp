@@ -7,6 +7,7 @@ import Currentprogress from '../Currentprogress/Currentprogress'
 import Webintro from '../Webintro/Webintro'
 
 const Dashboard = () => {
+  
   return (
     <div className='dashBoard'>
         <Selfintro />
