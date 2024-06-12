@@ -12,7 +12,7 @@ const Noteviewpage = () => {
   return (
     <div>
       <Navbar />
-      <Noteview note = {note} />
+      <Noteview  />
       <Footer />
     </div>
   )
