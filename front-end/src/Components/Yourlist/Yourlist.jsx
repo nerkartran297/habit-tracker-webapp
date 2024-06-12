@@ -10,7 +10,7 @@ const Yourlist = () => {
       <Todo />
       <Alarm />
       <Description />
-      <Updatehabit />
+      {/* <Updatehabit /> */}
     </div>
   )
 }

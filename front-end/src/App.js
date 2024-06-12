@@ -21,10 +21,8 @@ function App() {
         <Route path="/habit" element={<Habit />} />
         <Route path="/habit/:id" element={<Habit />} />
         <Route path="/note" element={<Notepage />} />
-        <Route path="noteview">
-          <Route path=":noteviewid" element={<Noteviewpage />} />
-        </Route>
-        <Route path="/noteeditor/:id" element={<Noteeditorpage />} />
+        <Route path="noteview" element={<Noteviewpage />} />
+        <Route path="/noteeditor" element={<Noteeditorpage />} />
       </Routes>
       </BrowserRouter>
     </div>
