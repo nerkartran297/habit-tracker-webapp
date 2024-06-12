@@ -1,0 +1,122 @@
+.bodymain {
+    font-family: 'UTM Avo', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #4285f4, #34a853);
+    color: #ffffff;
+}
+
+.main {
+    padding: 80px 40px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+.hero-content {
+    text-align: left;
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    max-width: 40%;
+    /* Điều chỉnh kích thước ảnh */
+    height: auto;
+    border-radius: 10px;
+    /* Bo tròn ảnh */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.feature {
+    background-color: linear-gradient(to left, #305b9f, #108930);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature i {
+    font-size: 3rem;
+    color: #4285f4;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.testimonial-slider {
+    /* CSS for your slider implementation */
+}
+
+.testimonial {
+    background-color: linear-gradient(to left, #305b9f, #108930);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.author {
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    background: linear-gradient(to right, #34a853, #4285f4);
+    /* Gradient ngược lại */
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.call-to-action h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    border-radius: 10px; 
+    border: 2px solid white; 
+    padding: 10px; 
+    background-color: aliceblue; 
+    margin-top:10px;
+}

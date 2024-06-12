@@ -3,18 +3,19 @@ import { Link } from 'react-router-dom'
 import './Note.css'
 import IMG_1877 from '../../Assets/IMG_1877.JPG'
 
-const Note = (props) => {
+const Note = ({notes}) => {
   return (
     <div className="noteContainer">
+      
       <Link to="/noteview">
-                <img src={props.image}/>
+                <img src={notes.image}/>
                 <div className="noteIntro">
                     <div >
-                        <h3 >{props.title}</h3>
-                        <p >{props.createdAt}</p>
+                        <h3 >{notes.title}</h3>
+                        <p >{notes.createdAt}</p>
                     </div>
                     <p>
-                            {props.content}
+                            {notes.content}
                     </p>
                 </div>
         </Link>

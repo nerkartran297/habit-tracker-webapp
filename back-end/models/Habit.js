@@ -28,5 +28,5 @@ const HabitSchema = new mongoose.Schema({
     },
 }, {timestamps: true});
 
-const NoteModel = mongoose.model('note', NoteSchema, "notes");
-module.exports = NoteModel;
+const HabitModel = mongoose.model('habit', HabitSchema, "habits");
+module.exports = HabitModel;

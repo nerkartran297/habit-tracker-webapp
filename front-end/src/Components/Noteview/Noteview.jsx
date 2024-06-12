@@ -3,26 +3,31 @@ import './Noteview.css'
 import IMG_1878 from '../../Assets/IMG_1878.JPG'
 import { Link } from 'react-router-dom'
 
-const Noteview = () => {
+const Noteview = ({note}) => {
+    if (!note) {
+        return null; // Return null if the note prop is null or undefined
+      }
+
+      
   return (
     <div className="editorContainer">
         <div className="viewContainer">
             <div className="noteCover">
-                <img src={IMG_1878}/>
+                {/* <img src={note.image}/> */}
             </div>
             <div className="notePreview">
                 <div >
                     <div >
                         <div className="noteHeader">
-                            <p id="previewDate">27-04-2024</p>
+                            <p id="previewDate">{note.createdAt}</p>
                         </div>
-                        <Link to="/noteeditor" className='enterEdit'>Click here to edit</Link>
+                        <Link to={`/noteeditor/${note.id}`} className='enterEdit'>Click here to edit</Link>
                     </div>
                     <div className="noteClassName">
-                        <p id="previewTitle" >Diary</p> 
+                        <p id="previewTitle" >{note.title}</p> 
                     </div>
                     <div className="noteBody">
-                        <p id="previewBody">Today is a good day and I love that.</p>
+                        <p id="previewBody">{note.content}</p>
                     </div>
                 </div>
             </div>

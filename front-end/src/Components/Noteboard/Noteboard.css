@@ -13,12 +13,16 @@
     background-color: rgb(177, 207, 241);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow-x: auto;
+    
 }
 
 .noteLine {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+    
 }
 
 .noteLine a:visited {

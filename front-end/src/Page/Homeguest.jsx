@@ -1,11 +1,13 @@
 import React from 'react'
-import Navbar from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
+import Navbarguest from '../Components/Navbarguest/Navbarguest'
+import Guest from '../Components/Guest/Guest'
 
 const Homeguest = () => {
   return (
     <div>
-      <Navbar />
+      <Navbarguest />
+      <Guest />
       <Footer />
     </div>
   )

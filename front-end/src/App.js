@@ -8,19 +8,23 @@ import Noteviewpage from './Page/Noteviewpage'
 import Noteeditorpage from './Page/Noteeditorpage'
 import './styles.css'
 import Loginsignuppage from './Page/Loginsignuppage';
+import Homeguest from './Page/Homeguest';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+      {localStorage.getItem('auth-token') ? <Route path="/" element={<Home />} />:<Route path="/" element={<Homeguest />}  />}
+        
         <Route path="/login" element={<Loginsignuppage />} />
         <Route path="/habit" element={<Habit />} />
         <Route path="/habit/:id" element={<Habit />} />
         <Route path="/note" element={<Notepage />} />
-        <Route path="/noteview" element={<Noteviewpage />} />
-        <Route path="/noteeditor" element={<Noteeditorpage />} />
+        <Route path="noteview">
+          <Route path=":noteviewid" element={<Noteviewpage />} />
+        </Route>
+        <Route path="/noteeditor/:id" element={<Noteeditorpage />} />
       </Routes>
       </BrowserRouter>
     </div>

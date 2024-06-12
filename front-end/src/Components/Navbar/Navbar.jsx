@@ -23,12 +23,12 @@ const Navbar = () => {
                 }
             } className="sectionItem">
             <Link
-             to='/'>Ranking</Link>
+             to='/'>Import</Link>
             
             </div>
             <div onClick={()=>{setMenu("home")}} className="sectionItem">
             <Link style={
-            menu === 'rank'
+            menu === 'import'
               ? {
                   backgroundColor: 'rgb(62, 164, 189)',
                   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
@@ -39,7 +39,7 @@ const Navbar = () => {
             </div>
             <div onClick={()=>{setMenu("note")}} className="sectionItem">
             <Link style={
-            menu === 'rank'
+            menu === 'import'
               ? {
                   backgroundColor: 'rgb(62, 164, 189)',
                   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',

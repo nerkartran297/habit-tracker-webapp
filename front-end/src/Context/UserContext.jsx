@@ -1,6 +1,5 @@
 import React, { createContext, useState } from 'react'
 import { useEffect } from 'react';
-
 export const UserContext = createContext(null);
 
 const UserContextProvider = (props) => {
@@ -8,10 +7,10 @@ const UserContextProvider = (props) => {
     useEffect(()=>{
 
         if(localStorage.getItem('auth-token')){
-    fetch('/getdescription',{
+        fetch('/getdescription',{
         method:'POST',
         headers:{
-            Accept:'application/form-data',
+            Accept:'application/json',
             'auth-token':`${localStorage.getItem('auth-token')}`,
             'Content-Type':'application/json',
         },
