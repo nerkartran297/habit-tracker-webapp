@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Habit Tracker - Watch</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/watch.css">
+    <link rel="icon" href="/assets/logo/logo.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="/css/player.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="watchAndList">
+        <div id="youtubePlayer">
+            <div class="miniNav">
+                <a href="/home" class="navBarItem"> Home </a>
+                <input style="font-family: 'UTM Avo'; text-align: center;" type="text" id="videoUrl" placeholder="Paste & Enter">
+                <a href="/login" class="navBarItem" id="login"> Log Out </a>
+            </div>
+            <div id="player"></div>
+        </div>
+        <!-- <div class="divider" style="border-radius: 20px; background-color:white; padding: 10px;"> Your last video list: </div> -->
+        <div id="listContainer">
+            <h3 style="text-align: center; margin-bottom: 40px; color: rgb(67, 137, 207);"> YOUR RECENT VIDEOS </h3>
+            <div id="currentList">
+            </div>
+        </div>
+
+    </div>
+    <scrip src="/js/logout.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="/js/watch.js"></script>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

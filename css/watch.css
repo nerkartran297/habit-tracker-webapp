@@ -1,0 +1,130 @@
+/* <div class="watchAndList">
+    <div id="youtubePlayer">
+        <input style="font-family: 'UTM Avo';"type="text" id="videoUrl" placeholder="Nhập link video YouTube">
+        <div id="player"></div>
+    </div>
+    <div id="currentList">  
+        <a>Cái này là cái cũ nè</a>
+    </div>
+</div> */
+
+.thumbnail {
+    cursor: pointer;
+    border-radius: 20px;
+    /* padding: 20px; */
+    /* padding-bottom: 20px; */
+}
+
+.thumbnail:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#listContainer {
+    width: 80%;
+    justify-content: center;
+}
+
+#currentList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    justify-content: center;
+    place-items: center;
+}
+
+.watchAndList {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: rgb(177, 207, 241);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    padding: 20px;
+    padding-top: 35px;
+}
+
+.miniNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.miniNav a {
+    width: 80px;
+    text-align: center;
+}
+
+#videoUrl {
+    font-size: 1rem;
+    width: 300px;
+    padding: 10px;
+    margin-top: 0px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#youtubePlayer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 20px;
+    aspect-ratio: 16 / 9;
+}
+
+#player {
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 700px) {
+    #videoUrl {
+        width: 100px;
+    }
+
+    #player {
+        max-height: 200px;
+    }
+}
+
+#searchSection {
+    margin-top: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#searchResults {
+    margin-top: 10px;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.result-item img {
+    width: 120px;
+    height: 90px;
+    margin-right: 10px;
+}
+
+.result-item h3 {
+    margin: 0;
+}

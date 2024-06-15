@@ -1,0 +1,18 @@
+.noteClass input {
+    font-family: 'UTM Avo';
+    text-align: center;
+    border-radius: 10px;
+}
+
+.noteHeader input {
+    font-family: 'UTM Avo';
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.noteBody {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}

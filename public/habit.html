@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Habit Tracker - Habit</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/habit.css">
+    <link rel="stylesheet" href="/css/player.css">
+    <link rel="icon" href="/assets/logo/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="navigationBar">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" class="toggle">
+            <div class="bars" id="bar1"></div>
+            <div class="bars" id="bar2"></div>
+            <div class="bars" id="bar3"></div>
+        </label>
+        <div class="textLogo">
+            <a href="/home">Habit Tracker</a>
+        </div>
+        <div class="navBarContainer"> 
+            <a href="/watch" class="navBarItem">
+                Watch
+            </a>
+            <a href="/home" class="navBarItem">
+                Home
+            </a>
+            <a href="/note" class="navBarItem"> Note </a>
+            <a href="/habit" class="navBarItem active" style="color: white;"> Habit </a>
+            <a href="/login" class="navBarItem" id="login"> Log Out </a>
+        </div>
+    </div>
+    <!-- End header -->
+
+    <div class="divider"> CHECKING FOR STATS </div>
+
+    <div class="habitContainer">
+        <div class="calendar"></div>
+        <div class="pinnedText" contenteditable="true">
+            <div>
+                <h3 id="pinnedTopic" style="margin:0px;text-align: center;"></h3>
+                <textarea id="pinnedContent"></textarea>
+            </div>
+        </div>
+        <div class="currentProgress">
+            <div id="youtubePlayer">
+                <input style="font-family: 'UTM Avo';"type="text" id="videoUrl" placeholder="Nhập link video YouTube">
+                <div id="player"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider">HABIT LIST - DESCRIPTION - HABIT CREATOR</div>
+
+    <div class="habitContainer">
+        <div class="alarmContainer"></div>
+        <div class="descriptionContainer">
+            <div style="display:flex; flex-direction: row; justify-content: space-between; margin-right: 0px; margin-left: 0px; align-items: center;">
+                <div style="text-align: center; min-width: 100px; max-width: 100px; display: flex; justify-content: start;">
+                    <p class="alarmTime" style="font-weight: bold;"></p>
+                </div>
+                <h3 class="alarmName" style="text-align: center;"></h3>
+                <button class="deleteHabitBtn" style="display: none; cursor:pointer;">Delete</button>
+                </div>
+            <!-- <p class="alarmDescription"></p> -->
+            <div class="alarmDescription" style="text-align: center;">Choose a habit to see the description
+            </div> 
+            
+        </div>
+        <div class="habitEditor" style="display:flex; flex-direction: column; justify-content: space-between; align-items: center;">
+            <h3 style="margin:0px; color: rgb(169, 79, 16);">HABIT CREATOR</h3>
+            <div style="border-radius: 10px; display: flex; flex-direction: row; justify-content: space-between; gap: 10px; min-width: 500px; max-width: 500px;"> 
+                <label for="habitName" style="margin:0px; color: rgb(169, 79, 16);">Name:</label>
+                <input id="habitName" type="text" required></input>
+                <label for="habitTime" style="margin:0px; color: rgb(169, 79, 16);">Time:</label>
+                <input id="habitTime" type="time" required></input>
+                <div style="background-color: rgb(246, 174, 174); padding: 5px; 
+                    border-radius: 10px;display: flex; flex-direction: row; justify-content: space-between; align-items: center;"> 
+                    <input type="checkbox" id="important" name="important">
+                </div>
+            </div>
+            <label for="habitDetail"></label>
+                <textarea id="habitDetail"></textarea>
+            <button type="submit" id="habitBTN">CREATE</button>
+        </div>
+        
+    </div>
+
+    <!-- Footer Start -->
+    <div class="footer" style="background-color: rgb(235, 242, 250);">
+        <div>
+            <p>&copy; Habit Tracker</p>
+            <div class="contact" style="display:flex;">
+                <div><a href="https://www.facebook.com/nerkar297">
+                    <i class="fa-brands fa-facebook"></i>
+                </a></div>
+                <div><a href="https://www.youtube.com">
+                    <i class="fa-brands fa-twitter"></i>
+                </a></div>
+                <div><a href="https://www.instagram.com/nerkar.297">
+                    <i class="fa-brands fa-instagram"></i>
+                </a></div>
+                <div><a href="https://www.linkedin.com/in/nerkar297">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a></div>
+            </div>
+        </div>
+    </div>
+    <div id="customAlert"></div>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/habitLoadPin.js"></script>
+    <script src="/js/habitLoadHabits.js"></script>
+    <script src="/js/player.js"></script>
+    <scrip src="/js/logout.js"></script>
+    <script src="/js/calendar.js"></script>
+</body>
+</html>

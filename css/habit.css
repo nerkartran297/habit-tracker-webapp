@@ -1,0 +1,222 @@
+.habitContainer {
+    width: auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: rgb(177, 207, 241);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.habitContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+.habitContainer::-webkit-scrollbar-thumb {
+    background-color: rgb(235, 242, 250);
+    border-radius: 10px;
+}
+
+.pinnedText h3 {
+    margin: 5px;
+}
+
+.pinnedText {
+    min-width: 400px;
+    max-width: 700px;
+    text-align: justify;
+}
+
+#pinnedContent {
+    font-family: 'UTM Avo';
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    min-width: 400px;
+    max-width: 500px;
+    min-height: 180px;
+    max-height: 180px;
+    overflow: auto;
+    background-color: rgb(252, 236, 216);
+    padding: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    resize: vertical;
+    margin-top: 20px;
+}
+
+.pinnedText:focus {
+    outline: 2px solid #007bff;
+}
+
+.pinnedText {
+    width: auto;
+    max-height: 230px;
+    min-height: 230px;
+    min-width: 400px;
+    background-color: rgb(239, 253, 224);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    /* overflow-y: auto; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alarmContainer {
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 250px;
+    height: auto;
+    max-height: 250px;
+    overflow: auto;
+    background-color: #e9fcff;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+.alarmContainer::-webkit-scrollbar {
+    width: 0px;
+}
+
+.alarmContainer::-webkit-scrollbar-thumb {
+    background-color: rgb(193, 222, 255);
+    border-radius: 10px;
+}
+
+.alarmInfo {
+    min-width: 160px;
+    height: 4rem;
+    border-radius: 20px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+.alarmDescription {
+    white-space: pre-wrap;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.alarmInfo:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.emergency {
+    background-color: rgb(255, 163, 163);
+}
+
+.calm {
+    background-color: rgb(180, 252, 164);
+}
+
+.descriptionContainer {
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 250px;
+    height: auto;
+    max-height: 250px;
+    background-color: rgb(214, 242, 255);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(45, 91, 39);
+}
+
+.deleteHabitBtn {
+    font-family: 'UTM Avo';
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    min-width: 100px;
+    max-width: 100px;
+    background-color: rgb(60, 124, 53);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.deleteHabitBtn:hover {
+    background-color: rgb(228, 82, 82);
+}
+
+.alarmDescription {
+    max-height: 9.0rem;
+    overflow: auto;
+}
+
+.habitEditor {
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 250px;
+    height: auto;
+    max-height: 250px;
+    background-color: rgb(252, 236, 216);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+#habitName,
+#habitTime {
+    font-family: 'UTM Avo';
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    background-color: white;
+    padding: 2px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+}
+
+#habitDetail {
+    font-family: 'UTM Avo';
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 120px;
+    max-height: 120px;
+    overflow: auto;
+    background-color: white;
+    padding: 2px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+}
+
+#habitBTN {
+    font-family: 'UTM Avo';
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    min-width: 500px;
+    max-width: 500px;
+    background-color: burlywood;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#habitBTN:hover {
+    background-color: rgb(248, 160, 59);
+    /* color: rgb(0, 0, 0); */
+}
