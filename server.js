@@ -13,10 +13,21 @@ const port = 3000;
 //     .then(() => console.log('Connected to MongoDB'))
 //     .catch(err => console.error('Could not connect to MongoDB', err));
 
-mongoose.connect('mongodb+srv://nerkartran:EKbfSeO960F6xoot@nerkar297.08aesdq.mongodb.net/?retryWrites=true&w=majority&appName=nerkar297', {})
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.error('Could not connect to MongoDB', err));
+const connectionString = 'mongodb+srv://nerkartran:EKbfSeO960F6xoot@nerkar297.08aesdq.mongodb.net/?retryWrites=true&w=majority&appName=nerkar297';
 
+mongoose.connect(connectionString, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 5000, // Timeout after 5 seconds if no server is found
+    socketTimeoutMS: 45000,        // Close sockets after 45 seconds of inactivity
+    family: 4                      // Use IPv4, may help in some network environments
+})
+    .then(() => console.log('Connected to MongoDB'))
+    .catch(err => {
+        console.error('Error connecting to MongoDB:', err);
+        // Optionally, exit the process if the connection fails
+        // process.exit(1); 
+    });
 //Create DATABASE
 const accountSchema = new mongoose.Schema({
     _id: { type: String, required: true },
