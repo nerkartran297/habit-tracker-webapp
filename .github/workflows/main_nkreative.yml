@@ -19,13 +19,13 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: npm ci # Tốt hơn là dùng 'ci' để cài đặt chính xác các dependencies
+        run: npm ci
 
       - name: Build app
-        run: npm start # Thay thế bằng lệnh build cụ thể của bạn (ví dụ: npm run build, next build,...)
+        run: npm ci
 
       - name: Zip artifact for deployment
-        run: zip release.zip dist/* -r # Giả sử thư mục 'dist' là nơi chứa kết quả build
+        run: zip release.zip dist/* -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
