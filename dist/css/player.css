@@ -1,0 +1,24 @@
+#youtubePlayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    gap: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#videoUrl {
+    width: 360px;
+    padding: 10px;
+    margin-top: 0px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#player {
+    width: 360px;
+    border-radius: 20px;
+    height: 180px;
+}
