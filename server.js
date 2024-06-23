@@ -147,7 +147,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
-        mongoUrl: 'mongodb://localhost:27017/habitTracker',
+        mongoUrl: 'mongodb+srv://nerkartran:EKbfSeO960F6xoot@nerkar297.08aesdq.mongodb.net/?retryWrites=true&w=majority&appName=nerkar297',
         collectionName: 'sessions'
     })
 }));
