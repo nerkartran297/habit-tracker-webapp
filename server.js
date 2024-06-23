@@ -20,7 +20,7 @@ mongoose.connect(connectionString, {
     socketTimeoutMS: 45000,
     family: 4
 });
-
+//Note
 //Create DATABASE
 const accountSchema = new mongoose.Schema({
     _id: { type: String, required: true },
