@@ -22,7 +22,7 @@ jobs:
         run: npm ci # Tốt hơn là dùng 'ci' để cài đặt chính xác các dependencies
 
       - name: Build app
-        run: npm run build # Thay thế bằng lệnh build cụ thể của bạn (ví dụ: npm run build, next build,...)
+        run: npm start # Thay thế bằng lệnh build cụ thể của bạn (ví dụ: npm run build, next build,...)
 
       - name: Zip artifact for deployment
         run: zip release.zip dist/* -r # Giả sử thư mục 'dist' là nơi chứa kết quả build
