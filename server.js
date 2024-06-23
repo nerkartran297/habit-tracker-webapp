@@ -7,7 +7,7 @@ const path = require('path');
 const multer = require('multer');
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 // mongoose.connect('mongodb://localhost:27017/habitTracker', {})
 //     .then(() => console.log('Connected to MongoDB'))
