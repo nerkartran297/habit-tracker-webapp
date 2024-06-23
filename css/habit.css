@@ -1,7 +1,148 @@
+#daysOfWeekContainer,
+#daysOfWeekContainerCreate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listTD::-webkit-scrollbar {
+    width: 0px;
+}
+
+.listTD::-webkit-scrollbar-thumb {
+    background-color: rgb(235, 242, 250);
+    border-radius: 10px;
+}
+
+.listTD {
+    overflow-y: auto;
+    max-height: 188px;
+    min-height: 188px;
+}
+
+.todoItem {
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.1s ease;
+    background-color: rgb(248, 225, 229);
+}
+
+.todoItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#todoList,
+#doneList {
+    width: 300px;
+    max-height: 188px;
+    min-height: 188px;
+}
+
+#doneList div {
+    background-color: rgb(198, 240, 194);
+}
+
+.todoCheck {
+    margin: 0px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.todoName {
+    margin: 0px;
+}
+
+.todoDelete {
+    margin: 0px;
+    margin-right: 5px;
+    display: flex;
+    min-width: 1.4rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.alarmName {
+    text-align: center;
+    margin: 0px;
+    border: none;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'UTM Avo';
+    font-size: 1.0rem;
+    max-height: 30px;
+}
+
+.alarmTime {
+    text-align: center;
+    margin: 0px;
+    border: none;
+    width: 100%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'UTM Avo';
+    font-size: 1.0rem;
+    max-height: 30px;
+}
+
+.alarmDescription {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'UTM Avo';
+    font-size: 1.0rem;
+    max-height: 180px;
+    min-height: 120px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+#daysOfWeekContainer button,
+#daysOfWeekContainerCreate button {
+    padding: 8px;
+    margin: 5px;
+    margin-bottom: 0px;
+    width: 3.2rem;
+    margin-top: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-family: 'UTM Avo';
+    background-color: white;
+    transition: box-shadow 0.15s ease;
+}
+
+#daysOfWeekContainer button:hover,
+#daysOfWeekContainerCreate button:hover,
+#daysOfWeekContainer button.active:hover,
+#daysOfWeekContainerCreate button.active:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#daysOfWeekContainer button.active,
+#daysOfWeekContainerCreate button.active {
+    /* background-color: rgb(161, 242, 161); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background-color: rgb(184, 237, 184)
+}
+
 .habitContainer {
     width: auto;
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    /* gap: 20px; */
     align-items: center;
     border-radius: 20px;
     margin: 20px;
@@ -15,6 +156,28 @@
 }
 
 .habitContainer::-webkit-scrollbar-thumb {
+    background-color: rgb(235, 242, 250);
+    border-radius: 10px;
+}
+
+.statContainer {
+    width: auto;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 20px;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: rgb(177, 207, 241);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.statContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+.statContainer::-webkit-scrollbar-thumb {
     background-color: rgb(235, 242, 250);
     border-radius: 10px;
 }
@@ -65,8 +228,8 @@
 }
 
 .alarmContainer {
-    min-width: 500px;
-    max-width: 500px;
+    min-width: 450px;
+    max-width: 450px;
     min-height: 250px;
     height: auto;
     max-height: 250px;
@@ -77,6 +240,7 @@
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 15px;
 }
@@ -114,16 +278,16 @@
 }
 
 .emergency {
-    background-color: rgb(255, 163, 163);
+    background-color: rgb(255, 148, 148);
 }
 
 .calm {
-    background-color: rgb(180, 252, 164);
+    background-color: #ffdb98;
 }
 
 .descriptionContainer {
-    min-width: 500px;
-    max-width: 500px;
+    min-width: 550px;
+    max-width: 550px;
     min-height: 250px;
     height: auto;
     max-height: 250px;
@@ -148,6 +312,25 @@
     padding-bottom: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s ease;
+}
+
+.saveHabitBtn {
+    font-family: 'UTM Avo';
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    min-width: 100px;
+    max-width: 100px;
+    background-color: rgb(85, 95, 238);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.saveHabitBtn:hover {
+    background-color: rgb(82, 172, 228);
 }
 
 .deleteHabitBtn:hover {
@@ -176,7 +359,7 @@
 #habitTime {
     font-family: 'UTM Avo';
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 20px;
     border: none;
     width: 100%;
     background-color: white;
@@ -188,12 +371,12 @@
 #habitDetail {
     font-family: 'UTM Avo';
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 20px;
     border: none;
     min-width: 500px;
     max-width: 500px;
-    min-height: 120px;
-    max-height: 120px;
+    min-height: 95px;
+    max-height: 95px;
     overflow: auto;
     background-color: white;
     padding: 2px;

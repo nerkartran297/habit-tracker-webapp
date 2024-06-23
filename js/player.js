@@ -4,15 +4,29 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '720',
         width: '1080',
-        videoId: 'OvLRybrkoaE',
+        videoId: '',
         events: {
             'onReady': onPlayerReady
         }
     });
 }
 
-function onPlayerReady(event) {
-    // Không cần xử lý gì ở đây
+async function onPlayerReady(event) {
+    try {
+        const response = await fetch('/api/me/latest-video');
+        if (!response.ok) {
+            throw new Error(`Error fetching latest video: ${response.statusText}`);
+        }
+        const data = await response.json();
+        const latestVideoId = data.latestVideoId;
+
+        if (latestVideoId) {
+            player.loadVideoById(latestVideoId);
+            document.getElementById('videoUrl').value = ``;
+        }
+    } catch (error) {
+        console.error("Error loading latest video:", error);
+    }
 }
 
 document.getElementById('videoUrl').addEventListener('keyup', function (event) {
@@ -21,14 +35,26 @@ document.getElementById('videoUrl').addEventListener('keyup', function (event) {
     }
 });
 
-function loadVideo() {
+async function loadVideo() {
     var url = document.getElementById('videoUrl').value;
     var videoId = getVideoIdFromUrl(url);
 
     if (videoId) {
         player.loadVideoById(videoId);
+
+        try {
+            const response = await fetch('/save-video', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ videoId })
+            });
+
+        } catch (error) {
+            console.error("Error saving video:", error);
+        }
+
     } else {
-        alert("Link YouTube không hợp lệ!");
+        alert("Please enter a valid link!");
     }
 }
 

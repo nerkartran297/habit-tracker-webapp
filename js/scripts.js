@@ -1,4 +1,4 @@
-//CUSTOME ALERT
+//CUSTOMED ALERT
 function showCustomAlert() {
     const customAlert = document.getElementById("customAlert");
     customAlert.style.display = "block";
@@ -17,10 +17,19 @@ window.alert = function (message) {
     showCustomAlert();
 };
 
+function clearAllNotifications() {
+    for (const notificationId in scheduledNotifications) {
+        clearTimeout(scheduledNotifications[notificationId]);
+    }
+    scheduledNotifications = {};
+}
+
 //SENDING NOTIFICATION WITH HABITS
 if (Notification.permission !== 'granted') {
     Notification.requestPermission();
 }
+
+let scheduledNotifications = {};
 
 async function loadNotif() {
     try {
@@ -32,6 +41,8 @@ async function loadNotif() {
             const timeB = new Date(`1970-01-01T${b.time}`).getTime();
             return timeA - timeB;
         });
+
+        clearAllNotifications();
 
         habits.forEach(habit => {
             if (Notification.permission === 'granted') {
@@ -45,7 +56,7 @@ async function loadNotif() {
             }
         });
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error loading habits:', error);
     }
 }
 
@@ -72,19 +83,32 @@ function scheduleNotification(habit) {
         habitTime.setDate(habitTime.getDate() + 1);
     }
 
-    const timeDiff = habitTime.getTime() - now.getTime();
+    const today = now.getDay();
+    if (habit.daysOfWeek & (1 << today)) {
+        const timeDiff = habitTime.getTime() - now.getTime();
 
-    setTimeout(() => {
-        new Notification(habit.name, {
-            body: habit.content,
-            icon: '/assets/img/IMG_1886.JPG'
-        });
-    }, timeDiff);
+        const notificationId = `habit-${habit.id}`;
+        const timeoutId = setTimeout(() => {
+            const audio = document.getElementById('notificationSound');
+            audio.play();
+            new Notification(habit.name, {
+                body: habit.content,
+                icon: '/assets/img/IMG_1886.JPG'
+            });
+        }, timeDiff);
+
+        scheduledNotifications[notificationId] = timeoutId;
+    }
+}
+
+function clearAllNotifications() {
+    for (const notificationId in scheduledNotifications) {
+        clearTimeout(scheduledNotifications[notificationId]);
+    }
+    scheduledNotifications = {};
 }
 
 loadNotif();
-
-
 
 
 

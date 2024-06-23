@@ -54,11 +54,11 @@
 }
 
 .noteContainer {
+    transition: transform 0.1s ease;
     display: flex;
     flex-direction: column;
     min-height: 250px;
     max-height: 250px;
-    background-color: white;
     border-radius: 20px;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -67,6 +67,7 @@
 
 .noteContainer:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
 }
 
 .noteContainer img {

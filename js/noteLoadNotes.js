@@ -1,16 +1,11 @@
-async function loadNotes(sortBy = 'none') {
+async function loadNotes() {
     try {
         const response = await fetch('/api/me/notes');
         const notes = await response.json();
 
-        // Sắp xếp ghi chú theo ngày nếu cần
-        if (sortBy === 'date-asc') {
-            notes.sort((a, b) => new Date(a.date) - new Date(b.date));
-        } else if (sortBy === 'date-desc') {
-            notes.sort((a, b) => new Date(b.date) - new Date(a.date));
-        }
+        notes.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-        const noteBoard = document.querySelector('.noteBoard'); // Lấy phần tử noteBoard
+        const noteBoard = document.querySelector('.noteBoard');
         noteBoard.innerHTML = `<div class="noteSearch" style="margin-bottom:0px;">
             <div style="display:flex; justify-content: space-between; align-items: center;">
                 <a class="createNoteBtn" href="/create">Create</a>
@@ -18,17 +13,12 @@ async function loadNotes(sortBy = 'none') {
                     Sort by:
                     <select id="finder">
                         <option value="none">None</option>
-                        <option value="date-asc">Date (Asc)</option>
-                        <option value="date-desc">Date (Dsc)</option>
+                        <option value="date-asc">Date (Oldest to Newest)</option>
+                        <option value="date-desc">Date (Newest to Oldest)</option>
                     </select>
                 </div>
             </div>
         </div>`;
-        // Lắng nghe sự thay đổi của hộp chọn để sắp xếp lại ghi chú
-        document.getElementById('finder').addEventListener('change', function () {
-            const sortBy = this.value;
-            loadNotes(sortBy);
-        });
 
         notes.forEach(note => {
             const noteLink = document.createElement('a');

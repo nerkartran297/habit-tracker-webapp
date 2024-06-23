@@ -23,9 +23,12 @@
         </div>
         <div class="navBarContainer"> 
             <a href="#" class="navBarItem active" style="color: white;"> View </a>
+            <a href="/timer" class="navBarItem"> Timer </a>
+            <a href="/watch" class="navBarItem"> Watch </a>
             <a href="/home" class="navBarItem"> Home </a>
             <a href="/note" class="navBarItem"> Note </a>
             <a href="/habit" class="navBarItem"> Habit </a>
+            <a href="/finance" class="navBarItem"> Finance </a>
             <a href="/login" class="navBarItem" id="login"> Log Out </a>
         </div>
     </div>
@@ -78,10 +81,13 @@
         </div>
     </div>
     <div id="customAlert"></div>
+    <audio id="notificationSound">
+        <source src="/assets/sound/dingdong.wav" type="audio/mpeg">
+    </audio>
     <script src="/js/viewDeleteNote.js"></script>
     <script src="/js/viewEditNote.js"></script>
     <script src="/js/viewLoadNote.js"></script>
     <script src="/js/scripts.js"></script>
-    <scrip src="/js/logout.js"></script>
+    <script src="/js/logout.js"></script>
 </body>
 </html>

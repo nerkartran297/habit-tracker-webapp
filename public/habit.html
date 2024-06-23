@@ -6,10 +6,8 @@
     <title>Habit Tracker - Habit</title>
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/habit.css">
-    <link rel="stylesheet" href="/css/player.css">
     <link rel="icon" href="/assets/logo/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
     <!-- Header -->
@@ -24,14 +22,12 @@
             <a href="/home">Habit Tracker</a>
         </div>
         <div class="navBarContainer"> 
-            <a href="/watch" class="navBarItem">
-                Watch
-            </a>
-            <a href="/home" class="navBarItem">
-                Home
-            </a>
+            <a href="/timer" class="navBarItem"> Timer </a>
+            <a href="/watch" class="navBarItem"> Watch </a>
+            <a href="/home" class="navBarItem"> Home </a>
             <a href="/note" class="navBarItem"> Note </a>
-            <a href="/habit" class="navBarItem active" style="color: white;"> Habit </a>
+            <a href="#" class="navBarItem active" style="color: white;"> Habit </a>
+            <a href="/finance" class="navBarItem"> Finance </a>
             <a href="/login" class="navBarItem" id="login"> Log Out </a>
         </div>
     </div>
@@ -39,56 +35,86 @@
 
     <div class="divider"> CHECKING FOR STATS </div>
 
-    <div class="habitContainer">
+    <div class="statContainer">
         <div class="calendar"></div>
-        <div class="pinnedText" contenteditable="true">
+        <div class="pinnedText">
             <div>
-                <h3 id="pinnedTopic" style="margin:0px;text-align: center;"></h3>
+                <h3 contenteditable="true" id="pinnedTopic" style="margin:0px;text-align: center; white-space: nowrap;"></h3>
                 <textarea id="pinnedContent"></textarea>
             </div>
         </div>
-        <div class="currentProgress">
-            <div id="youtubePlayer">
-                <input style="font-family: 'UTM Avo';"type="text" id="videoUrl" placeholder="Nhập link video YouTube">
-                <div id="player"></div>
+        <div class="currentProgress" style="justify-content: start; text-align: center; align-items: center; min-width: 300px;">
+            <div>
+                <input type="text" style="text-align: center; width: 250px;
+                background-color: rgb(214, 242, 255); padding: 5px; margin: 0px; font-size: 1rem;
+                font-family: 'UTM Avo'; border-radius: 10px; border: none;" id="todoInput" placeholder="Enter your to-do list">
+            </div>
+            <div class="contain" style="max-height: 200px;">
+                <div class="listTD" style="display: flex; justify-content: center; text-align: center; align-items: center; min-width: 300px; max-width: 300px; max-height: 270px; overflow-y: auto;">
+                    <div id="todoList"></div>
+                </div>
+            </div>
+        </div>
+        <div class="currentProgress" style="justify-content: start; text-align: center; align-items: center; min-width: 300px;">
+            <p style="font-weight: bold; font-size: 1rem; text-align: center; margin: 0px; width: 260px; padding: 5px; border-radius: 10px; background-color: rgb(255, 225, 185);">Done List</p>
+            <div class="contain" style="max-height: 200px;">
+                <div class="listTD" style="display: flex; justify-content: center; text-align: center; align-items: center; min-width: 300px; max-width: 300px; max-height: 270px; overflow-y: auto;">
+                    <div id="doneList"></div>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="divider">HABIT LIST - DESCRIPTION - HABIT CREATOR</div>
-
+    
+    <div class="divider">HABITS BOARD</div>
+    
     <div class="habitContainer">
         <div class="alarmContainer"></div>
         <div class="descriptionContainer">
+            <h3 class="guide" style="text-align: center; margin: 0px; margin-top: 70px;">Choose a habit to:</h3>
+            <h4 class="guideOption" style="text-align: center; margin: 0px;">1. See the description<br>2. Edit<br>3. Delete</h4>
+            <div style="display:flex; flex-direction: row; justify-content: center; margin-right: 0px; margin-left: 0px; align-items: center;">
+                <textarea class="alarmName" style="resize: none; display:none;"></textarea>
+            </div>
+            <div style="display:flex; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 10px">
+                <div style="text-align: center; min-width: 100px; align-items: center; display: flex; justify-content: center; display:none;">
+                    <textarea class="alarmTime" style="resize: none;"></textarea> 
+                </div>
+                <div id="daysOfWeekContainer" style="display:none;"> </div>
+            </div>
+            <div style="display:flex; flex-direction: row; justify-content: center; margin-right: 0px; margin-left: 0px; align-items: center;">
+                <textarea class="alarmDescription" style="text-align: center; display:none"></textarea>
+            </div>
             <div style="display:flex; flex-direction: row; justify-content: space-between; margin-right: 0px; margin-left: 0px; align-items: center;">
-                <div style="text-align: center; min-width: 100px; max-width: 100px; display: flex; justify-content: start;">
-                    <p class="alarmTime" style="font-weight: bold;"></p>
-                </div>
-                <h3 class="alarmName" style="text-align: center;"></h3>
+                <button class="saveHabitBtn" style="display:none; cursor:pointer;">Save</button>
                 <button class="deleteHabitBtn" style="display: none; cursor:pointer;">Delete</button>
-                </div>
-            <!-- <p class="alarmDescription"></p> -->
-            <div class="alarmDescription" style="text-align: center;">Choose a habit to see the description
-            </div> 
-            
-        </div>
+            </div>
+        </div>                
         <div class="habitEditor" style="display:flex; flex-direction: column; justify-content: space-between; align-items: center;">
-            <h3 style="margin:0px; color: rgb(169, 79, 16);">HABIT CREATOR</h3>
-            <div style="border-radius: 10px; display: flex; flex-direction: row; justify-content: space-between; gap: 10px; min-width: 500px; max-width: 500px;"> 
+            <h3 style="margin:0px; margin-bottom: 5px; color: rgb(169, 79, 16);">HABIT CREATOR</h3>
+            <div id="daysOfWeekContainerCreate">
+                <button id="btnMonday">Mon</button>
+                <button id="btnTuesday">Tue</button>
+                <button id="btnWednesday">Wed</button>
+                <button id="btnThursday">Thu</button>
+                <button id="btnFriday">Fri</button>
+                <button id="btnSaturday">Sat</button>
+                <button id="btnSunday">Sun</button>
+            </div>
+            <div style="border-radius: 10px; display: flex; margin-top: 10px; flex-direction: row; justify-content: space-between; gap: 10px; min-width: 500px; max-width: 500px;"> 
                 <label for="habitName" style="margin:0px; color: rgb(169, 79, 16);">Name:</label>
                 <input id="habitName" type="text" required></input>
                 <label for="habitTime" style="margin:0px; color: rgb(169, 79, 16);">Time:</label>
                 <input id="habitTime" type="time" required></input>
+
                 <div style="background-color: rgb(246, 174, 174); padding: 5px; 
                     border-radius: 10px;display: flex; flex-direction: row; justify-content: space-between; align-items: center;"> 
                     <input type="checkbox" id="important" name="important">
                 </div>
             </div>
             <label for="habitDetail"></label>
-                <textarea id="habitDetail"></textarea>
-            <button type="submit" id="habitBTN">CREATE</button>
+                <textarea id="habitDetail" style="margin: 0px; margin-top: 10px;"></textarea>
+            <button type="submit" id="habitBTN" style="margin-top: 10px;">CREATE</button>
         </div>
-        
     </div>
 
     <!-- Footer Start -->
@@ -112,11 +138,13 @@
         </div>
     </div>
     <div id="customAlert"></div>
-    <script src="/js/scripts.js"></script>
+    <audio id="notificationSound">
+        <source src="/assets/sound/dingdong.wav" type="audio/mpeg">
+    </audio>
     <script src="/js/habitLoadPin.js"></script>
     <script src="/js/habitLoadHabits.js"></script>
-    <script src="/js/player.js"></script>
-    <scrip src="/js/logout.js"></script>
+    <script src="/js/logout.js"></script>
+    <script src="/js/todo.js"></script>
     <script src="/js/calendar.js"></script>
 </body>
 </html>

@@ -1,9 +1,18 @@
-# habit-tracker-webapp
-A webapp using HTML, CSS, ExpressJS and JavaScript for managing and creating good habits. We can also write some notes on it (it's like a Google Docs).
-Shhhhh, this tool can skip Youtube video's ads :>
+[HABIT TRACKER - WEB]
 
-How to use:
-0. Install Node.Js, VSCode and MongoDB Compass
-1. Download & Extract
-2. Run: npm install
-3. Run: npm start
+0. USED TECH: HTML, CSS, EXPRESS, MONGODB
+1. Features:
+   - Track your habits (Alarm & Do to List)
+   - Write your notes
+   - Skip ad for your Youtube videos
+   - Manage your finance
+   - Counter (Clock Countdown)
+   - Visualize your finance by graphs and tables
+2. How to use:
+   - Download & install Node.js, MongoDB Compass and VSCode
+   - Install the package by "npm install" and then run it with "npm start"
+   - Go to: http://localhost:3000
+   - Use it
+3. License:
+   - This web is designed by me
+   - Please ask before a download or a copy of my template

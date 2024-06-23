@@ -7,7 +7,7 @@ async function loadPinned() {
             const topicElement = document.getElementById('pinnedTopic');
             const contentElement = document.getElementById('pinnedContent');
 
-            topicElement.textContent = data.topic;
+            topicElement.textContent = data.topic.replace('<br>', '');
             contentElement.value = data.content;
         } else {
             console.error('Error fetching pinned post:', data.error);

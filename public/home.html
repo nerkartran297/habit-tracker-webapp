@@ -1,112 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
     <title>Habit Tracker - Home</title>
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/player.css">
-    <link rel="icon" href="/assets/logo/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="icon" href="/assets/logo/logo.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Header -->
     <div class="navigationBar">
-        <input type="checkbox" id="checkbox">
-        <label for="checkbox" class="toggle">
-            <div class="bars" id="bar1"></div>
-            <div class="bars" id="bar2"></div>
-            <div class="bars" id="bar3"></div>
-        </label>
-        <div class="textLogo">
-            <a href="/home">Habit Tracker</a>
-        </div>
-        <div class="navBarContainer"> 
-            <a href="/watch" class="navBarItem"> Watch </a>
-            <a href="/home" class="navBarItem active" style="color: white;"> Home </a>
-            <a href="/note" class="navBarItem"> Note </a>
-            <a href="/habit" class="navBarItem"> Habit </a>
-            <a href="/login" class="navBarItem" id="login"> Log Out </a>
-        </div>
+      <input type="checkbox" id="checkbox" />
+      <label for="checkbox" class="toggle">
+        <div class="bars" id="bar1"></div>
+        <div class="bars" id="bar2"></div>
+        <div class="bars" id="bar3"></div>
+      </label>
+      <div class="textLogo">
+        <a href="/home">Habit Tracker</a>
+      </div>
+      <div class="navBarContainer">
+        <a href="/timer" class="navBarItem"> Timer </a>
+        <a href="/watch" class="navBarItem"> Watch </a>
+        <a href="#" class="navBarItem active" style="color: white"> Home </a>
+        <a href="/note" class="navBarItem"> Note </a>
+        <a href="/habit" class="navBarItem"> Habit </a>
+        <a href="/finance" class="navBarItem"> Finance </a>
+        <a href="/login" class="navBarItem" id="login"> Log Out </a>
+      </div>
     </div>
     <!-- End header -->
 
-    <div class="divider"> MY DASHBOARD </div>
+    <div class="divider">MY DASHBOARD</div>
     <!-- Part 1: Information and Introduction -->
     <div class="dashBoard">
-        <div class="selfIntro">
-            <div class="imgPart">
-                <img src="/img/IMG_1878.JPG"/>
-            </div>
-            <div class="textPart">
-                <h3>Việc hôm nay chớ để ngày mai</h3>
-                <div class="text-content-wrapper">
-                    <p>
-                        Trên con đường thành công không có dấu chân của kẻ lười biếng. Trên con đường thành công không có dấu chân của kẻ lười biếng. 
-                    </p>
-                </div>
-            </div>
+      <div class="selfIntro">
+        <div class="imgPart">
+          <img src="/img/IMG_1878.JPG" />
         </div>
-        
-        <div class="currentProgress">
-            <div id="youtubePlayer">
-                <input style="font-family: 'UTM Avo';"type="text" id="videoUrl" placeholder="Nhập link video YouTube">
-                <div id="player"></div>
-            </div>
+        <div class="textPart">
+          <h3>Việc hôm nay chớ để ngày mai</h3>
+          <div class="text-content-wrapper">
+            <p>
+              Trên con đường thành công không có dấu chân của kẻ lười biếng.
+              Trên con đường thành công không có dấu chân của kẻ lười biếng.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div class="calendar"></div>
+      <div class="calendar"></div>
 
-        <div class="webIntro">
-            <div>
-                <h3>Introduction</h3>
-                <p>
-                    Click 'Note' or 'Habit' to create and manage!
-                </p>
-            </div>
+      <div class="webIntro">
+        <div>
+          <h3>Introduction</h3>
+          <p>Click 'Note' or 'Habit' to create and manage!</p>
         </div>
+      </div>
     </div>
 
-    <div class="divider"> YOUR RECENT NOTES </div>
+    <div class="divider">YOUR RECENT NOTES</div>
     <!-- Part 2: Habits and Notes progress -->
     <div class="pinnedDoc">
-        <a href="viewNote.html" class="document">
-            <img src="/img/IMG_1877.JPG"
-            class="docImage"
-            style="width: 90%; height: 90%; border-radius: 20px;"/>
-            <h4 class="docTitle">Diary: 23/04/2024</h4>
-            <p class="docShort">This is a good day...</p>
-        </a>
+      <a href="viewNote.html" class="document">
+        <img
+          src="/img/IMG_1877.JPG"
+          class="docImage"
+          style="width: 90%; height: 90%; border-radius: 20px"
+        />
+        <h4 class="docTitle">Diary: 23/04/2024</h4>
+        <p class="docShort">This is a good day...</p>
+      </a>
     </div>
 
     <!-- Footer Start -->
-    <div class="footer" style="background-color: rgb(235, 242, 250);">
-        <div>
-            <p>&copy; Habit Tracker</p>
-            <div class="contact" style="display:flex;">
-                <div><a href="https://www.facebook.com/nerkar297">
-                    <i class="fa-brands fa-facebook"></i>
-                </a></div>
-                <div><a href="https://www.youtube.com">
-                    <i class="fa-brands fa-twitter"></i>
-                </a></div>
-                <div><a href="https://www.instagram.com/nerkar.297">
-                    <i class="fa-brands fa-instagram"></i>
-                </a></div>
-                <div><a href="https://www.linkedin.com/in/nerkar297">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a></div>
-            </div>
+    <div class="footer" style="background-color: rgb(235, 242, 250)">
+      <div>
+        <p>&copy; Habit Tracker</p>
+        <div class="contact" style="display: flex">
+          <div>
+            <a href="https://www.facebook.com/nerkar297">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.youtube.com">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/nerkar.297">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/nerkar297">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
     <div id="customAlert"></div>
+    <audio id="notificationSound">
+      <source src="/assets/sound/dingdong.wav" type="audio/mpeg" />
+    </audio>
     <script src="/js/scripts.js"></script>
     <script src="/js/homeLoadNotes.js"></script>
     <script src="/js/homeLoadIntro.js"></script>
-    <scrip src="/js/logout.js"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="/js/player.js"></script>
+    <script src="/js/logout.js"></script>
     <script src="/js/calendar.js"></script>
-</body>
+  </body>
 </html>

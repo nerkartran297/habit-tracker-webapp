@@ -80,7 +80,7 @@ a:visited {
 }
 
 .navBarItem {
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease, transform 0.1s ease;
     margin: 5px;
     padding-left: 15px;
     padding-right: 15px;
@@ -91,8 +91,9 @@ a:visited {
 }
 
 .navBarItem:hover {
-    background-color: rgb(186, 186, 186);
+    background-color: rgb(110, 166, 250);
     color: white;
+    transform: scale(1.05);
 }
 
 .active {
@@ -129,7 +130,8 @@ a:visited {
 .dashBoard {
     width: auto;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 20px;
     align-items: center;
     border-radius: 20px;
     margin: 20px;
@@ -218,6 +220,7 @@ a:visited {
 
 .currentProgress {
     width: 400px;
+    min-width: 250px;
     max-height: 230px;
     min-height: 230px;
     background-color: white;
@@ -319,7 +322,7 @@ a:visited {
 .cellDay {
     cursor: pointer;
     border-radius: 20px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.15s ease;
 }
 
 .cellDay:hover {
@@ -342,6 +345,10 @@ a:visited {
     text-align: center;
 }
 
+.noteItem {
+    text-align: center;
+}
+
 .calendarDay {
     margin: 2px;
     display: flex;
@@ -349,6 +356,7 @@ a:visited {
     align-items: center;
     flex-grow: 1;
     padding: 5px;
+    min-width: 30px;
 }
 
 .today {

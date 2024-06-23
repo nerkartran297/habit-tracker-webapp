@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Habit Tracker - Timer</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/timer.css">
+    <link rel="stylesheet" href="/css/player.css">
+    <link rel="icon" href="/assets/logo/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <div class="navigationBar">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" class="toggle">
+            <div class="bars" id="bar1"></div>
+            <div class="bars" id="bar2"></div>
+            <div class="bars" id="bar3"></div>
+        </label>
+        <div class="textLogo">
+            <a href="/home">Habit Tracker</a>
+        </div>
+        <div class="navBarContainer"> 
+            <a href="#" class="navBarItem active" style="color: white;"> Timer </a>
+            <a href="/watch" class="navBarItem"> Watch </a>
+            <a href="/home" class="navBarItem"> Home </a>
+            <a href="/note" class="navBarItem"> Note </a>
+            <a href="/habit" class="navBarItem"> Habit </a>
+            <a href="/finance" class="navBarItem"> Finance </a>
+            <a href="/login" class="navBarItem" id="login"> Log Out </a>
+        </div>
+    </div>
+
+    <div id="playerContainer">
+        <div id="youtubePlayer">
+            <input style="font-family: 'UTM Avo';"type="text" id="videoUrl" placeholder="Nhập link video YouTube">
+            <div id="player"></div>
+        </div>
+    </div>
+    <!-- End header -->
+    <div class="countBoard">
+        <h3 class="titleCount" style="color: rgb(78, 78, 78); text-align: center;">Let's Totoro help you countdown the time!
+            <br>You can play a Youtube video here~
+        </h3>
+        <div class="inputField">
+          <input type="number" id="hoursInput" placeholder="Hours" min="0">
+          <input type="number" id="minutesInput" placeholder="Minutes" min="0">
+          <input type="number" id="secondsInput" placeholder="Seconds" min="0">
+          <button type="submit" id="startBtn"> Start </button>
+        </div>
+        <div class="countDown">
+          <h3 class="hours">00</h3>
+          <span>:</span>
+          <h3 class="minutes">00</h3>
+          <span>:</span>
+          <h3 class="seconds">00</h3>
+        </div>
+    </div>
+    <!-- Footer Start -->
+    <div class="footer" style="background-color: rgb(235, 242, 250);">
+        <div>
+            <p>&copy; Habit Tracker</p>
+            <div class="contact" style="display:flex;">
+                <div><a href="https://www.facebook.com/nerkar297">
+                    <i class="fa-brands fa-facebook"></i>
+                </a></div>
+                <div><a href="https://www.youtube.com">
+                    <i class="fa-brands fa-twitter"></i>
+                </a></div>
+                <div><a href="https://www.instagram.com/nerkar.297">
+                    <i class="fa-brands fa-instagram"></i>
+                </a></div>
+                <div><a href="https://www.linkedin.com/in/nerkar297">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a></div>
+            </div>
+        </div>
+    </div>
+    <audio id="alarmSound">
+        <source src="/assets/sound/dingdong.wav" type="audio/mpeg">
+    </audio>
+    <div id="customAlert"></div>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/logout.js"></script>
+    <script src="/js/player.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="/js/timer.js"></script>
+</body>
+</html>

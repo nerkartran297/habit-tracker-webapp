@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/finance.css " />
+    <link rel="stylesheet" href="/css/home.css " />
+    <link rel="icon" href="/assets/logo/logo.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Habit Tracker - Finance</title>
+  </head>
+  <body>
+    <div class="navigationBar">
+      <input type="checkbox" id="checkbox" />
+      <label for="checkbox" class="toggle">
+        <div class="bars" id="bar1"></div>
+        <div class="bars" id="bar2"></div>
+        <div class="bars" id="bar3"></div>
+      </label>
+      <div class="textLogo">
+        <a href="/home">Habit Tracker</a>
+      </div>
+      <div class="navBarContainer">
+        <a href="/timer" class="navBarItem"> Timer </a>
+        <a href="/watch" class="navBarItem"> Watch </a>
+        <a href="/home" class="navBarItem"> Home </a>
+        <a href="/note" class="navBarItem"> Note </a>
+        <a href="/habit" class="navBarItem"> Habit </a>
+        <a href="/#" class="navBarItem active" style="color: white">
+          Finance
+        </a>
+        <a href="/login" class="navBarItem" id="login"> Log Out </a>
+      </div>
+    </div>
+    <!-- End header -->
+
+    <!-- <div class="divider"> MY NOTES </div> -->
+    <div class="container">
+      <div
+        style="
+          margin-top: 20px;
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          background-color: white;
+          padding: 40px;
+          padding-top: 0px;
+          padding-bottom: 30px;
+          border-radius: 20px;
+        "
+      >
+        <div class="totalView">
+          <h2
+            style="
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              gap: 20px;
+              margin-bottom: 0px;
+              margin-top: 30px;
+              align-items: center;
+            "
+          >
+            <select id="financeFinder">
+              <!-- <option>Click here!</option> -->
+            </select>
+          </h2>
+          <div class="graphContainer">
+            <div class="graph">
+              <div class="outer">
+                <div class="inner">
+                  <div class="numberIncomes">81%</div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="150px"
+                height="150px"
+              >
+                <circle
+                  class="incomeBar"
+                  cx="75"
+                  cy="75"
+                  r="67"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="graph">
+              <div class="outer">
+                <div class="inner">
+                  <div class="numberExpenses">48%</div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="150px"
+                height="150px"
+              >
+                <circle
+                  class="expenseBar"
+                  cx="75"
+                  cy="75"
+                  r="67"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="graph">
+              <div class="outer">
+                <div class="inner">
+                  <div class="numberSavings">24%</div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="150px"
+                height="150px"
+              >
+                <circle
+                  class="savingBar"
+                  cx="75"
+                  cy="75"
+                  r="67"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="graph">
+              <div class="outer">
+                <div class="inner">
+                  <div class="numberExtras">72%</div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="150px"
+                height="150px"
+              >
+                <circle
+                  class="extraBar"
+                  cx="75"
+                  cy="75"
+                  r="67"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="graph">
+              <div class="outer">
+                <div class="inner">
+                  <div class="totalNumber">Budget</div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="150px"
+                height="150px"
+                style="transform: rotate(90deg); transform-origin: center"
+              >
+                <circle
+                  class="incBarBudget"
+                  cx="75"
+                  cy="75"
+                  r="67"
+                  style="stroke-dashoffset: 0"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="150px"
+                height="150px"
+              >
+                <circle
+                  class="expBarBudget"
+                  cx="75"
+                  cy="75"
+                  r="67"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="150px"
+                height="150px"
+                style="transform: rotate(90deg); transform-origin: center"
+              >
+                <circle
+                  class="savBarBudget"
+                  cx="75"
+                  cy="75"
+                  r="67"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="graph">
+              <div class="outer">
+                <div class="inner">
+                  <div class="totalNumber">Actual</div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="150px"
+                height="150px"
+                style="transform: rotate(90deg); transform-origin: center"
+              >
+                <circle
+                  class="incBarActual"
+                  cx="75"
+                  cy="75"
+                  r="67"
+                  style="stroke-dashoffset: 0"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="150px"
+                height="150px"
+              >
+                <circle
+                  class="expBarActual"
+                  cx="75"
+                  cy="75"
+                  r="67"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="150px"
+                height="150px"
+                style="transform: rotate(90deg); transform-origin: center"
+              >
+                <circle
+                  class="savBarActual"
+                  cx="75"
+                  cy="75"
+                  r="67"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin-bottom: 10px;
+            "
+          >
+            <button id="newFinance">New Plan</button>
+            <button id="addBillButton">Add Bill</button>
+          </div>
+          <div class="totalContainer"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="footer" style="background-color: rgb(235, 242, 250)">
+      <div>
+        <p>&copy; Habit Tracker</p>
+        <div class="contact" style="display: flex">
+          <div>
+            <a href="https://www.facebook.com/nerkar297">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.youtube.com">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/nerkar.297">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/nerkar297">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="billDetailsOverlay" class="overlay" style="display: none">
+      <div id="billDetailsContainer" class="bill-details-container"></div>
+    </div>
+    <div id="customAlert"></div>
+    <audio id="notificationSound">
+      <source src="/assets/sound/dingdong.wav" type="audio/mpeg" />
+    </audio>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/finance.js"></script>
+    <script src="/js/logout.js"></script>
+  </body>
+</html>
