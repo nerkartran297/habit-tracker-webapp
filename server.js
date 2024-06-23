@@ -9,13 +9,13 @@ const multer = require('multer');
 const app = express();
 const port = 3000;
 
-mongoose.connect('mongodb://localhost:27017/habitTracker', {})
+// mongoose.connect('mongodb://localhost:27017/habitTracker', {})
+//     .then(() => console.log('Connected to MongoDB'))
+//     .catch(err => console.error('Could not connect to MongoDB', err));
+
+mongoose.connect('mongodb+srv://nerkartran:EKbfSeO960F6xoot@nerkar297.08aesdq.mongodb.net/?retryWrites=true&w=majority&appName=nerkar297', {})
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Could not connect to MongoDB', err));
-
-/*mongoose.connect('mongodb+srv://nerkartran:EKbfSeO960F6xoot@nerkar297.08aesdq.mongodb.net/?retryWrites=true&w=majority&appName=nerkar297', {})
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.error('Could not connect to MongoDB', err));*/
 
 //Create DATABASE
 const accountSchema = new mongoose.Schema({
