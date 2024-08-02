@@ -71,8 +71,8 @@ function displayFinanceDetails(finance, totals) {
     summaryElement.innerHTML = `
     <div class="billName">Sumary: </div>
     <div class="billDate"></div>
-    <div class="budget">${formatCurrency(totals.budgetTotal)}</div>
-    <div class="actual">${formatCurrency(totals.actualTotal)}</div>
+    <div class="budget">${formatCurrency(totals.income.budget - totals.expense.budget - totals.extra.budget - totals.saving.budget)}</div>
+    <div class="actual">${formatCurrency(totals.income.actual - totals.expense.actual - totals.extra.actual - totals.saving.actual)}</div>
     <div class="billCategory">${((totals.budgetTotal !== 0) ? totals.actualTotal / totals.budgetTotal * 100 : 0).toFixed(1)} %</div>
     <div class="remain">${formatCurrency(totals.budgetTotal - totals.actualTotal)}</div>
   `;

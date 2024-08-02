@@ -5,22 +5,23 @@ const MongoStore = require('connect-mongo');
 const bcrypt = require('bcrypt');
 const path = require('path');
 const multer = require('multer');
+require('dotenv').config();
 
 const app = express();
-const port = 8080;
+const port = 3000;
 
 // mongoose.connect('mongodb://localhost:27017/habitTracker', {})
 //     .then(() => console.log('Connected to MongoDB'))
 //     .catch(err => console.error('Could not connect to MongoDB', err));
 
-const connectionString = 'mongodb+srv://nerkartran:EKbfSeO960F6xoot@nerkar297.08aesdq.mongodb.net/?retryWrites=true&w=majority&appName=nerkar297';
+const mongoURI = "mongodb+srv://nerkartran:EKbfSeO960F6xoot@nerkar297.08aesdq.mongodb.net/?retryWrites=true&w=majority&appName=nerkar297";
 
-mongoose.connect(connectionString, {
-    serverSelectionTimeoutMS: 5000,
-    socketTimeoutMS: 45000,
-    family: 4
-});
-//Note
+console.log(mongoURI);
+
+mongoose.connect(mongoURI, {})
+    .then(() => console.log('Connected to MongoDB'))
+    .catch(err => console.error('Could not connect to MongoDB', err));
+
 //Create DATABASE
 const accountSchema = new mongoose.Schema({
     _id: { type: String, required: true },
@@ -151,7 +152,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
-        mongoUrl: 'mongodb+srv://nerkartran:EKbfSeO960F6xoot@nerkar297.08aesdq.mongodb.net/?retryWrites=true&w=majority&appName=nerkar297',
+        mongoUrl: 'mongodb://localhost:27017/habitTracker',
         collectionName: 'sessions'
     })
 }));
